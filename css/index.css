@@ -11,7 +11,8 @@
 /* 媒体查询，针对手机设备 */  
 @media (max-width: 768px) {  
   .ensemble {  
-    background-image: url('../img/backgroundpicture01.jpg');  
-    /* 其他手机特定样式 */  
+	background-image: url('../img/backgroundpicture01.jpg');  
+	width: "100%";
+	height: 100vh;
   }  
 }
