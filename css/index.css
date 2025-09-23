@@ -73,6 +73,7 @@ a {
 	flex: 1;  /* 让这两个元素均分空间 */
 	font-size: 12px;
 	margin-top: 4px;
+	display: block;
 }
 
 /* 按钮部分 */
@@ -102,5 +103,9 @@ a {
 @media screen and (max-width: 768px) {
 	body .ensemble {  /* 增加选择器权重 */
 		background-image: url('../img/backgroundpicture01.jpg') !important;
+	}
+	.university,
+	.profession {
+		display: none;
 	}
 }
