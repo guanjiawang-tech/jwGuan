@@ -53,7 +53,8 @@ a {
 .user-info {
 	text-align: left;
 	/* background-color: antiquewhite; */
-	padding: 10px;
+	padding-left: 5px;
+	padding-top: 10px;
 }
 
 .buttons {
@@ -81,7 +82,8 @@ a {
 	display: flex;
 	justify-content: flex-end; /* 使按钮对齐到右侧 */
 	align-items: center;
-	margin-top: 28px;
+	margin-top: 32px;
+	flex-shrink: 0; /* 禁止压缩 */
 }
 
 .profile-button {
@@ -105,8 +107,14 @@ a {
 		background-image: url('../img/backgroundpicture01.jpg') !important;
 	}
 	.username {
-		font-size: 12px;
+		font-size: 14px;
 	}
+	.avatar {
+	    width: 60px;
+	    height: 60px;
+		flex-shrink: 0;
+	}
+	
 	.university,
 	.profession {
 		display: none;

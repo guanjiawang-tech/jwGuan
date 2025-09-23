@@ -9,7 +9,7 @@ const langConfig = {
 	technologyStack: "技术栈"
   },
   en: {
-    username: "Guan Jiawang",
+    username: `GuanJwang`,
     language: "Language",
     english: "EN",
     chinese: "CN",
