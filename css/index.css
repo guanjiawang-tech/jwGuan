@@ -104,6 +104,9 @@ a {
 	body .ensemble {  /* 增加选择器权重 */
 		background-image: url('../img/backgroundpicture01.jpg') !important;
 	}
+	.username {
+		font-size: 14px;
+	}
 	.university,
 	.profession {
 		display: none;
