@@ -68,9 +68,39 @@ a {
 	font-size: 18px;
 }
 
+.university,
+.profession {
+	flex: 1;  /* 让这两个元素均分空间 */
+	font-size: 12px;
+	margin-top: 4px;
+}
+
+/* 按钮部分 */
+.profile-actions {
+	display: flex;
+	justify-content: flex-end; /* 使按钮对齐到右侧 */
+	align-items: center;
+	margin-top: 28px;
+}
+
+.profile-button {
+	background-color: #ff8e6f;
+	color: white;
+	border: none;
+	padding: 5px 20px;
+	border-radius: 20px;
+	cursor: pointer;
+	font-size: 14px;
+	transition: background-color 0.3s;
+}
+
+.profile-button:hover {
+  background-color: #e77e66;
+}
+
 /* 手机端适配 */
 @media screen and (max-width: 768px) {
-  body .ensemble {  /* 增加选择器权重 */
-    background-image: url('../img/backgroundpicture01.jpg') !important;
-  }
+	body .ensemble {  /* 增加选择器权重 */
+		background-image: url('../img/backgroundpicture01.jpg') !important;
+	}
 }
