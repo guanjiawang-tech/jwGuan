@@ -6,9 +6,9 @@ const langConfig = {
     chinese: "中文"
   },
   en: {
-    username: "guanjiawang",
+    username: "Guan Jiawang",
     language: "Language",
-    english: "English",
-    chinese: "Chinese"
+    english: "EN",
+    chinese: "CN"
   }
 };
