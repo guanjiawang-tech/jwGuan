@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>关佳旺 - 个人简介</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="./css/index.css">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="ensemble">
+			<!-- 导航栏 -->
+			<nav class="navbar">
+				<div class="nav-container">
+					<div class="nav-logo">
+						<span data-lang="username"></span>
+					</div>
+					
+					<!-- 桌面端菜单 -->
+					<div class="nav-menu desktop-menu">
+						<a href="#home" class="nav-link active" data-lang="home">首页</a>
+						<a href="#education" class="nav-link" data-lang="education">教育经历</a>
+						<a href="#experience" class="nav-link" data-lang="experience">工作经历</a>
+						<a href="#projects" class="nav-link" data-lang="projects">项目经历</a>
+						<a href="#skills" class="nav-link" data-lang="skills">技术栈</a>
+						<a href="#resources" class="nav-link" data-lang="resources">资源</a>
+					</div>
+					
+					<!-- 语言切换 -->
+					<div class="nav-language">
+						<a href="javascript:void(0);" data-lang="chinese" onclick="changeLanguage('zh')"></a> | 
+						<a href="javascript:void(0);" data-lang="english" onclick="changeLanguage('en')"></a>
+					</div>
+					
+					<!-- 移动端菜单按钮 -->
+					<button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+						<span class="hamburger-line"></span>
+						<span class="hamburger-line"></span>
+						<span class="hamburger-line"></span>
+					</button>
+				</div>
+			</nav>
+			
+			<!-- 移动端侧边栏菜单 -->
+			<div class="mobile-sidebar" id="mobileSidebar">
+				<div class="sidebar-header">
+					<div class="sidebar-logo">
+						<span data-lang="username"></span>
+					</div>
+					<button class="sidebar-close" onclick="toggleMobileMenu()">
+						<i class="fas fa-times"></i>
+					</button>
+				</div>
+				<div class="sidebar-menu">
+					<a href="#home" class="sidebar-link active" data-lang="home" onclick="switchSection('home'); toggleMobileMenu();">
+						<i class="fas fa-home"></i>
+						<span>首页</span>
+					</a>
+					<a href="#education" class="sidebar-link" data-lang="education" onclick="switchSection('education'); toggleMobileMenu();">
+						<i class="fas fa-graduation-cap"></i>
+						<span>教育经历</span>
+					</a>
+					<a href="#experience" class="sidebar-link" data-lang="experience" onclick="switchSection('experience'); toggleMobileMenu();">
+						<i class="fas fa-briefcase"></i>
+						<span>工作经历</span>
+					</a>
+					<a href="#projects" class="sidebar-link" data-lang="projects" onclick="switchSection('projects'); toggleMobileMenu();">
+						<i class="fas fa-project-diagram"></i>
+						<span>项目经历</span>
+					</a>
+					<a href="#skills" class="sidebar-link" data-lang="skills" onclick="switchSection('skills'); toggleMobileMenu();">
+						<i class="fas fa-code"></i>
+						<span>技术栈</span>
+					</a>
+					<a href="#resources" class="sidebar-link" data-lang="resources" onclick="switchSection('resources'); toggleMobileMenu();">
+						<i class="fas fa-folder-open"></i>
+						<span>资源</span>
+					</a>
+				</div>
+				<div class="sidebar-language">
+					<div class="language-title" data-lang="language">语言</div>
+					<div class="language-options">
+						<button class="lang-btn" onclick="changeLanguage('zh'); toggleMobileMenu();" data-lang="chinese">中文</button>
+						<button class="lang-btn" onclick="changeLanguage('en'); toggleMobileMenu();" data-lang="english">English</button>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 移动端菜单遮罩 -->
+			<div class="mobile-overlay" id="mobileOverlay" onclick="toggleMobileMenu()"></div>
+			
+			<!-- 移动端浮动菜单按钮 -->
+			<button class="floating-menu-btn" id="floatingMenuBtn" onclick="toggleMobileMenu()">
+				<span class="hamburger-line"></span>
+				<span class="hamburger-line"></span>
+				<span class="hamburger-line"></span>
+			</button>
+
+			<!-- 主要内容区域 -->
+			<div class="main-content">
+				<!-- 动态内容加载区域 -->
+				<div id="content-container">
+					<!-- 内容将通过AJAX动态加载到这里 -->
+				</div>
+			</div>
+
+			<!-- 返回顶部按钮 -->
+			<button class="back-to-top" onclick="scrollToTop()">
+				<i class="fas fa-arrow-up"></i>
+			</button>
+			
+			<!-- 项目弹出层 -->
+			<div class="project-modal" id="projectModal">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title" id="modalTitle">项目详情</h3>
+						<button class="modal-close" onclick="closeProjectModal()">
+							<i class="fas fa-times"></i>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-tabs">
+							<button class="modal-tab active" onclick="switchModalTab('demo')" data-lang="view_demo">演示</button>
+							<button class="modal-tab" onclick="switchModalTab('code')" data-lang="view_code">代码</button>
+						</div>
+						<div class="modal-tab-content active" id="demoContent">
+							<div class="modal-demo">
+								<img id="demoImage" src="./img/background2.jpg" alt="项目演示" />
+								<p id="demoDescription">项目演示截图和说明</p>
+							</div>
+						</div>
+						<div class="modal-tab-content" id="codeContent">
+							<div class="modal-code">
+								<pre id="codePreview">// 项目代码示例
+function ProjectComponent() {
+  return (
+    <div className="project-container">
+      <h1>项目标题</h1>
+      <p>项目描述内容</p>
+    </div>
+  );
+}
+
+export default ProjectComponent;</pre>
+							</div>
+						</div>
+					</div>
+					<div class="modal-actions">
+						<button class="modal-btn modal-btn-secondary" onclick="closeProjectModal()">关闭</button>
+						<a href="#" class="modal-btn modal-btn-primary" id="projectLink" target="_blank">访问项目</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<script src="./config/lang.js"></script>
+	<script src="./script/index.js"></script>
+	</body>
+</html>

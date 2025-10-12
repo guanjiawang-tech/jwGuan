@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>首页 - 关佳旺</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 首页介绍 -->
+    <section id="home" class="section active">
+        <div class="hero-section">
+            <div class="hero-content">
+                <div class="avatar-container">
+                    <div class="avatar">
+                        <img src="./img/background1.jpg" alt="头像" />
+                    </div>
+                    <div class="avatar-ring"></div>
+                </div>
+                <div class="hero-text">
+                    <h1 class="hero-name" data-lang="username"></h1>
+                    <p class="hero-title" data-lang="profession"></p>
+                    <p class="hero-university" data-lang="university"></p>
+                    <div class="hero-description">
+                        <p data-lang="hero_desc"></p>
+                    </div>
+                    <div class="hero-buttons">
+                        <button class="btn-primary" onclick="scrollToSection('projects')" data-lang="view_projects">查看项目</button>
+                        <button class="btn-secondary" onclick="scrollToSection('skills')" data-lang="view_skills">技术栈</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./config/lang.js"></script>
+    <script src="./script/index.js"></script>
+</body>
+</html>
