@@ -28,13 +28,13 @@ const langConfig = {
     edu_description: "主修计算机科学与技术专业，学习了数据结构、算法、数据库、网络编程等核心课程。在校期间积极参与各类编程竞赛和项目实践，培养了扎实的编程基础和解决问题的能力。",
     
     // 工作经历
-    exp_company1: "示例科技公司",
-    exp_period1: "2022.06 - 至今",
-    exp_position1: "前端开发工程师",
-    exp_description1: "负责公司主要产品的前端开发工作，使用React、Vue.js等现代前端框架构建用户界面。参与产品需求分析、技术方案设计，并与后端团队协作完成项目开发。",
-    exp_skill1: "React",
-    exp_skill2: "Vue.js",
-    exp_skill3: "JavaScript",
+    exp_company1: "沈阳工学院 现代化技术服务中心",
+    exp_period1: "2025.07 - 至今",
+    exp_position1: "全栈开发工程师",
+    exp_description1: "负责公司鸿蒙版《智慧沈工》开发工作，使用ArkTS Spring Boot等技术实现。参与产品需求分析、技术方案设计，并与后端团队协作完成项目开发。",
+    exp_skill1: "ArkTS",
+    exp_skill2: "Spring Boot",
+    exp_skill3: "Node.js",
     
     // 项目经历
     project1_title: "电商管理系统",
@@ -90,10 +90,10 @@ const langConfig = {
     exp_company1: "Example Tech Company",
     exp_period1: "2022.06 - Present",
     exp_position1: "Frontend Developer",
-    exp_description1: "Responsible for frontend development of company's main products, using modern frontend frameworks like React and Vue.js to build user interfaces. Participated in product requirement analysis, technical solution design, and collaborated with backend team to complete project development.",
-    exp_skill1: "React",
-    exp_skill2: "Vue.js",
-    exp_skill3: "JavaScript",
+    exp_description1: "Responsible for the development of the HarmonyOS version of 'Zhi Hui Shen Gong APP', using technologies such as ArkTS and Spring Boot. Participated in product requirement analysis, technical solution design, and collaborated with the backend team to complete the project development.",
+    exp_skill1: "ArkTS",
+    exp_skill2: "Spring Boot",
+    exp_skill3: "Node.js",
     
     // 项目经历
     project1_title: "E-commerce Management System",
