@@ -23,7 +23,7 @@ const langConfig = {
     
     // 教育经历
     edu_university: "沈阳工学院",
-    edu_period: "2018 - 2022",
+    edu_period: "2022 - 2026",
     edu_degree: "计算机科学与技术 本科",
     edu_description: "主修计算机科学与技术专业，学习了数据结构、算法、数据库、网络编程等核心课程。在校期间积极参与各类编程竞赛和项目实践，培养了扎实的编程基础和解决问题的能力。",
     
@@ -82,7 +82,7 @@ const langConfig = {
     
     // 教育经历
     edu_university: "ShenYang Institute Of Technology",
-    edu_period: "2018 - 2022",
+    edu_period: "2022 - 2026",
     edu_degree: "Bachelor of Computer Science and Technology",
     edu_description: "Majoring in Computer Science and Technology, studied core courses including data structures, algorithms, databases, and network programming. Actively participated in programming competitions and project practices during university, developing solid programming foundation and problem-solving abilities.",
     

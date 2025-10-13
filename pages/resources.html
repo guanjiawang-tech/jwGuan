@@ -29,40 +29,13 @@
                             <div class="resource-content">
                                 <h4>GitHub 仓库</h4>
                                 <p>我的开源项目和学习笔记</p>
-                                <a href="https://github.com/yourusername" target="_blank" class="resource-link">
+                                <a href="https://github.com/guanjiawang-tech" target="_blank" class="resource-link">
                                     <i class="fas fa-external-link-alt"></i>
                                     访问仓库
                                 </a>
                             </div>
                         </div>
                         
-                        <div class="resource-card">
-                            <div class="resource-icon">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <div class="resource-content">
-                                <h4>技术博客</h4>
-                                <p>分享技术心得和开发经验</p>
-                                <a href="#" class="resource-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    阅读博客
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="resource-card">
-                            <div class="resource-icon">
-                                <i class="fas fa-video"></i>
-                            </div>
-                            <div class="resource-content">
-                                <h4>视频教程</h4>
-                                <p>前端开发视频教程和实战项目</p>
-                                <a href="#" class="resource-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    观看视频
-                                </a>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 
@@ -130,19 +103,8 @@
                             </div>
                             <div class="contact-info">
                                 <h4>邮箱</h4>
-                                <p>your.email@example.com</p>
-                                <a href="mailto:your.email@example.com" class="contact-link">发送邮件</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fab fa-linkedin"></i>
-                            </div>
-                            <div class="contact-info">
-                                <h4>LinkedIn</h4>
-                                <p>专业社交网络</p>
-                                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-link">查看资料</a>
+                                <p>15041059652@163.com</p>
+                                <a href="mailto:15041059652@163.com" class="contact-link">发送邮件</a>
                             </div>
                         </div>
                         
@@ -153,7 +115,7 @@
                             <div class="contact-info">
                                 <h4>Twitter</h4>
                                 <p>技术动态分享</p>
-                                <a href="https://twitter.com/yourusername" target="_blank" class="contact-link">关注我</a>
+                                <a href="https://x.com/Juston112" target="_blank" class="contact-link">关注我</a>
                             </div>
                         </div>
                         
@@ -164,7 +126,11 @@
                             <div class="contact-info">
                                 <h4>微信</h4>
                                 <p>日常交流</p>
-                                <a href="#" class="contact-link">添加好友</a>
+                                <a href="javascript:void(0)" 
+								   class="contact-link"
+								   onclick="event.stopPropagation(); copyToClipboard('微信号：weixin2025')">
+									添加好友
+								</a>
                             </div>
                         </div>
                     </div>
@@ -226,5 +192,21 @@
 
     <script src="./config/lang.js"></script>
     <script src="./script/index.js"></script>
+	<script>
+		function copyToClipboard(text) {
+			navigator.clipboard.writeText(text).then(() => {
+				alert(`已复制: ${text}`);
+			}).catch(err => {
+				console.error('复制失败:', err);
+			});
+		}
+ 
+		// 为整个联系块添加复制功能
+		document.querySelector('.contact-item').addEventListener('click', function(e) {
+			if (!e.target.classList.contains('contact-link')) {
+				copyToClipboard('微信：日常交流');
+			}
+		});
+	</script>
 </body>
 </html>
