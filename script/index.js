@@ -3,12 +3,45 @@ let currentSection = 'home'; // 当前激活的section
 
 // 设置页面文本内容
 function setLanguage(lang) {
-  const elements = document.querySelectorAll("[data-lang]");
-
-  elements.forEach(element => {
-    const key = element.getAttribute("data-lang");
-    if (langConfig[lang] && langConfig[lang][key]) {
-    element.textContent = langConfig[lang][key];
+  const config = langConfig[lang];
+  // 确保config存在
+  if (!config) return;
+  
+  // 特殊处理教育经历页面 - 动态渲染时间线
+  const educationSection = document.getElementById('education');
+  if (educationSection && config.education && Array.isArray(config.education)) {
+    const timelineContainer = educationSection.querySelector('.timeline');
+    if (timelineContainer) {
+      // 清空现有内容，但保留section-title
+      timelineContainer.innerHTML = '';
+      
+      // 遍历教育经历数组，动态创建时间线项
+      config.education.forEach((edu, index) => {
+        const timelineItem = document.createElement('div');
+        timelineItem.className = 'timeline-item';
+        timelineItem.innerHTML = `
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>${edu.university}</h3>
+            <p class="timeline-period">${edu.period}</p>
+            <p class="timeline-degree">${edu.degree}</p>
+            <p class="timeline-description">${edu.description}</p>
+          </div>
+        `;
+        timelineContainer.appendChild(timelineItem);
+      });
+    }
+  }
+  
+  // 处理其他带有data-lang属性的元素
+  document.querySelectorAll('[data-lang]').forEach(element => {
+    const key = element.getAttribute('data-lang');
+    // 直接从配置中获取值
+    let value = config[key];
+    
+    // 如果找到值，则设置元素内容
+    if (value !== undefined) {
+      element.textContent = value;
     }
   });
 }

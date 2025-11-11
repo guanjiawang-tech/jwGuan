@@ -10,7 +10,7 @@ const langConfig = {
     
     // 导航菜单
     home: "首页",
-    education: "教育经历",
+    nav_education: "教育经历",
     experience: "工作经历",
     projects: "项目经历",
     skills: "技术栈",
@@ -22,10 +22,20 @@ const langConfig = {
     view_skills: "技术栈",
     
     // 教育经历
-    edu_university: "沈阳工学院",
-    edu_period: "2018 - 2022",
-    edu_degree: "计算机科学与技术 本科",
-    edu_description: "主修计算机科学与技术专业，学习了数据结构、算法、数据库、网络编程等核心课程。在校期间积极参与各类编程竞赛和项目实践，培养了扎实的编程基础和解决问题的能力。",
+    education: [
+      {
+        university: "沈阳工学院",
+        period: "2018 - 2022",
+        degree: "计算机科学与技术 本科",
+        description: "主修计算机科学与技术专业，学习了数据结构、算法、数据库、网络编程等核心课程。在校期间积极参与各类编程竞赛和项目实践，培养了扎实的编程基础和解决问题的能力。"
+      },
+      {
+        university: "示例高中",
+        period: "2014 - 2018",
+        degree: "理科班",
+        description: "在高中期间专注于理科学习，培养了良好的逻辑思维能力和数学基础，为后续的计算机学习打下了坚实的基础。"
+      }
+    ],
     
     // 工作经历
     exp_company1: "沈阳工学院 现代化技术服务中心",
@@ -69,7 +79,7 @@ const langConfig = {
     
     // 导航菜单
     home: "Home",
-    education: "Education",
+    nav_education: "Education",
     experience: "Experience",
     projects: "Projects",
     skills: "Skills",
@@ -81,10 +91,20 @@ const langConfig = {
     view_skills: "Skills",
     
     // 教育经历
-    edu_university: "ShenYang Institute Of Technology",
-    edu_period: "2018 - 2022",
-    edu_degree: "Bachelor of Computer Science and Technology",
-    edu_description: "Majoring in Computer Science and Technology, studied core courses including data structures, algorithms, databases, and network programming. Actively participated in programming competitions and project practices during university, developing solid programming foundation and problem-solving abilities.",
+    education: [
+      {
+        university: "ShenYang Institute Of Technology",
+        period: "2018 - 2022",
+        degree: "Bachelor of Computer Science and Technology",
+        description: "Majoring in Computer Science and Technology, studied core courses including data structures, algorithms, databases, and network programming. Actively participated in programming competitions and project practices during university, developing solid programming foundation and problem-solving abilities."
+      },
+      {
+        university: "Example High School",
+        period: "2014 - 2018",
+        degree: "Science Class",
+        description: "Focused on science subjects in high school, developed good logical thinking skills and mathematical foundation, laying a solid groundwork for subsequent computer studies."
+      }
+    ],
     
     // 工作经历
     exp_company1: "Example Tech Company",
