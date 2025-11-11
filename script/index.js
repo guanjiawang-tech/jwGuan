@@ -918,10 +918,381 @@ function switchModalTab(tabName) {
 
 // 下载文件功能
 function downloadFile(filename) {
+  // 特殊处理开发资源和技术文档的点击事件
+  if (filename === 'projects.zip') {
+    showDevelopmentResourcesModal();
+    return;
+  } else if (filename === 'docs.pdf') {
+    showTechnicalDocumentsModal();
+    return;
+  }
+  
   // 这里可以添加实际的下载逻辑
   // 例如：创建一个临时的下载链接
   const link = document.createElement('a');
-  link.href = `./downloads/${filename}`;
+  
+  // 特殊处理简历文件下载
+  if (filename === 'resume.pdf') {
+    link.href = './resources/22计科02班关佳旺2231030102.pdf';
+    link.download = '22计科02班关佳旺2231030102.pdf';
+  } else {
+    // 其他文件保持原路径
+    link.href = `./resources/${filename}`;
+    link.download = filename;
+  }
+  
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  
+  // 显示下载提示
+  showDownloadNotification(filename);
+}
+
+// 确保resources对象已加载
+if (!window.resources) {
+  window.resources = {
+    developmentResources: [],
+    technicalDocuments: []
+  };
+}
+
+// 显示开发资源弹窗
+function showDevelopmentResourcesModal() {
+  // 创建模态框
+  const modal = document.createElement('div');
+  modal.className = 'resources-modal';
+  
+  // 构建资源列表HTML
+  let resourcesHTML = '';
+  resources.developmentResources.forEach(resource => {
+    resourcesHTML += `
+      <div class="resource-item">
+        <div class="resource-info">
+          <h4>${resource.name}</h4>
+          <p>${resource.description}</p>
+          <div class="resource-url-container">
+            <span class="resource-url">${resource.url}</span>
+            <button class="copy-btn" onclick="copyToClipboard('${resource.url}', this)">
+              <i class="fas fa-copy"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    `;
+  });
+  
+  modal.innerHTML = `
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>开发资源列表</h3>
+        <span class="modal-close" onclick="this.parentElement.parentElement.parentElement.remove()">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div class="resources-list">
+          ${resourcesHTML}
+        </div>
+      </div>
+    </div>
+  `;
+  
+  // 添加样式
+  const style = document.createElement('style');
+  style.textContent = `
+    .resources-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      background: white;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 800px;
+      max-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+    .modal-header {
+      padding: 20px;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .modal-header h3 {
+      margin: 0;
+      color: #333;
+    }
+    .modal-close {
+      font-size: 28px;
+      cursor: pointer;
+      color: #666;
+      background: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .modal-close:hover {
+      color: #333;
+      background: #f5f5f5;
+    }
+    .modal-body {
+      padding: 20px;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .resources-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .resource-item {
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #f9f9f9;
+    }
+    .resource-info h4 {
+      margin: 0 0 8px 0;
+      color: #333;
+    }
+    .resource-info p {
+      margin: 0 0 10px 0;
+      color: #666;
+      font-size: 14px;
+    }
+    .resource-url-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: white;
+      padding: 8px 12px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+    .resource-url {
+      flex: 1;
+      font-size: 14px;
+      color: #0066cc;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .copy-btn {
+      background: #f0f0f0;
+      border: none;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666;
+    }
+    .copy-btn:hover {
+      background: #e0e0e0;
+      color: #333;
+    }
+    .copy-btn.copied {
+      background: #4caf50;
+      color: white;
+    }
+  `;
+  
+  document.head.appendChild(style);
+  document.body.appendChild(modal);
+  
+  // 点击模态框背景关闭
+  modal.onclick = function(e) {
+    if (e.target === modal) {
+      modal.remove();
+    }
+  };
+}
+
+// 显示技术文档弹窗
+function showTechnicalDocumentsModal() {
+  // 创建模态框
+  const modal = document.createElement('div');
+  modal.className = 'resources-modal';
+  
+  // 构建文档列表HTML
+  let documentsHTML = '';
+  resources.technicalDocuments.forEach(doc => {
+    documentsHTML += `
+      <div class="document-item">
+        <div class="document-info">
+          <h4>${doc.name}</h4>
+          <p>${doc.description}</p>
+          <button class="download-doc-btn" onclick="downloadDocument('${doc.file}')">
+            <i class="fas fa-download"></i>
+            下载文档
+          </button>
+        </div>
+      </div>
+    `;
+  });
+  
+  modal.innerHTML = `
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>技术文档列表</h3>
+        <span class="modal-close" onclick="this.parentElement.parentElement.parentElement.remove()">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div class="documents-list">
+          ${documentsHTML}
+        </div>
+      </div>
+    </div>
+  `;
+  
+  // 添加样式
+  const style = document.createElement('style');
+  style.textContent = `
+    .resources-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      background: white;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 800px;
+      max-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+    .modal-header {
+      padding: 20px;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .modal-header h3 {
+      margin: 0;
+      color: #333;
+    }
+    .modal-close {
+      font-size: 28px;
+      cursor: pointer;
+      color: #666;
+      background: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .modal-close:hover {
+      color: #333;
+      background: #f5f5f5;
+    }
+    .modal-body {
+      padding: 20px;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .documents-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .document-item {
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #f9f9f9;
+    }
+    .document-info h4 {
+      margin: 0 0 8px 0;
+      color: #333;
+    }
+    .document-info p {
+      margin: 0 0 10px 0;
+      color: #666;
+      font-size: 14px;
+    }
+    .download-doc-btn {
+      background: #0066cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 8px 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 14px;
+    }
+    .download-doc-btn:hover {
+      background: #0052a3;
+    }
+  `;
+  
+  document.head.appendChild(style);
+  document.body.appendChild(modal);
+  
+  // 点击模态框背景关闭
+  modal.onclick = function(e) {
+    if (e.target === modal) {
+      modal.remove();
+    }
+  };
+}
+
+// 复制文本到剪贴板
+function copyToClipboard(text, button) {
+  navigator.clipboard.writeText(text).then(() => {
+    // 更改按钮状态表示已复制
+    const originalText = button.innerHTML;
+    button.innerHTML = '<i class="fas fa-check"></i>';
+    button.classList.add('copied');
+    
+    // 2秒后恢复按钮状态
+    setTimeout(() => {
+      button.innerHTML = originalText;
+      button.classList.remove('copied');
+    }, 2000);
+    
+    // 显示复制成功提示
+    showNotification('复制成功！');
+  }).catch(err => {
+    console.error('复制失败:', err);
+    showNotification('复制失败，请手动复制', true);
+  });
+}
+
+// 下载技术文档
+function downloadDocument(filename) {
+  const link = document.createElement('a');
+  link.href = `./resources/${filename}`;
   link.download = filename;
   document.body.appendChild(link);
   link.click();
@@ -929,6 +1300,140 @@ function downloadFile(filename) {
   
   // 显示下载提示
   showDownloadNotification(filename);
+}
+
+// 显示通用通知
+function showNotification(message, isError = false) {
+  const notification = document.createElement('div');
+  notification.className = 'notification' + (isError ? ' error' : ' success');
+  notification.textContent = message;
+  
+  // 添加样式
+  const style = document.createElement('style');
+  style.textContent = `
+    .notification {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 15px 25px;
+      border-radius: 5px;
+      color: white;
+      font-size: 14px;
+      z-index: 1001;
+      animation: slideInRight 0.3s ease-out;
+    }
+    .notification.success {
+      background: #4caf50;
+    }
+    .notification.error {
+      background: #f44336;
+    }
+    @keyframes slideInRight {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  `;
+  
+  document.head.appendChild(style);
+  document.body.appendChild(notification);
+  
+  // 3秒后移除通知
+  setTimeout(() => {
+    notification.style.transition = 'opacity 0.3s, transform 0.3s';
+    notification.style.opacity = '0';
+    notification.style.transform = 'translateX(100%)';
+    setTimeout(() => {
+      notification.remove();
+    }, 300);
+  }, 3000);
+}
+
+// 显示微信二维码图片
+function showWeChatQR() {
+    // 创建模态框
+    const modal = document.createElement('div');
+    modal.className = 'qrcode-modal';
+    modal.innerHTML = `
+        <div class="qrcode-content">
+            <span class="qrcode-close" onclick="this.parentElement.parentElement.remove()">&times;</span>
+            <img src="./img/WeChat.jpg" alt="微信二维码" class="qrcode-image">
+            <p>扫描二维码添加微信</p>
+        </div>
+    `;
+    
+    // 添加样式
+    const style = document.createElement('style');
+    style.textContent = `
+        .qrcode-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .qrcode-content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            min-width: 400px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .qrcode-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            cursor: pointer;
+            color: #666;
+            background: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .qrcode-close:hover {
+            color: #333;
+            background: #f5f5f5;
+        }
+        .qrcode-image {
+            max-width: 350px;
+            max-height: 350px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .qrcode-content p {
+            margin-top: 15px;
+            font-size: 16px;
+            color: #333;
+        }
+    `;
+    
+    document.head.appendChild(style);
+    document.body.appendChild(modal);
+    
+    // 点击模态框背景关闭
+    modal.onclick = function(e) {
+        if (e.target === modal) {
+            modal.remove();
+        }
+    };
 }
 
 // 显示下载通知
