@@ -28,12 +28,6 @@ const langConfig = {
         period: "2018 - 2022",
         degree: "计算机科学与技术 本科",
         description: "主修计算机科学与技术专业，学习了数据结构、算法、数据库、网络编程等核心课程。在校期间积极参与各类编程竞赛和项目实践，培养了扎实的编程基础和解决问题的能力。"
-      },
-      {
-        university: "示例高中",
-        period: "2014 - 2018",
-        degree: "理科班",
-        description: "在高中期间专注于理科学习，培养了良好的逻辑思维能力和数学基础，为后续的计算机学习打下了坚实的基础。"
       }
     ],
     
@@ -43,15 +37,15 @@ const langConfig = {
         company: "沈阳工学院 现代化技术服务中心",
         period: "2025.07 - 至今",
         position: "全栈开发工程师",
-        description: "负责公司鸿蒙版《智慧沈工》开发工作，使用ArkTS Spring Boot等技术实现。参与产品需求分析、技术方案设计，并与后端团队协作完成项目开发。",
-        skills: ["ArkTS", "Spring Boot", "Node.js"]
+        description: "参与鸿蒙版《智慧沈工》开发工作，使用ArkTS Spring Boot等技术实现。参与艺术团管理系统开发工作，使用Vue Spring Boot等技术实现。",
+        skills: ["TypeScript", "JavaScript", "Spring Boot", "Vue3.js", "React", "MySQL"]
       },
       {
-        company: "实习公司",
-        period: "2021.06 - 2021.12",
+        company: "沈阳工学院 华为产业学院",
+        period: "2025.03 - 2025.06",
         position: "前端开发实习生",
-        description: "在实习期间参与了多个前端项目的开发，学习了现代前端开发技术栈，包括React、Vue.js等框架的使用，积累了丰富的项目经验。",
-        skills: ["HTML/CSS", "JavaScript", "React"]
+        description: "在实习期间参与了心理健康教育平台前端项目的页面开发工作，学习了现代前端开发技术栈，ArkTS框架，积累了项目经验。",
+        skills: ["ArkTS", "AJAX", "TypeScript"]
       }
     ],
     
@@ -60,25 +54,28 @@ const langConfig = {
     // 项目列表
     projects_list: [
       {
-        id: "project1",
-        title: "电商管理系统",
-        description: "基于React和Node.js开发的电商管理系统，包含商品管理、订单处理、用户管理等功能模块。采用前后端分离架构，使用MongoDB存储数据。",
+        id: "project3",
+        title: "Smart Learning 智慧教学平台 | 全栈 | 在校项目 | 毕业设计 | 开发中",
+        description: `基于Spring AI技术栈开发的智慧教学平台，集成了智能题库生成、在线考试评测、个性化学习推荐等功能，提升教学效率和学习体验。\n`,
         image: "./img/background2.jpg",
-        techs: ["React", "Node.js", "MongoDB"]
+        techs: ["ArkTS", "React", "Spring AI", "Spring Boot", "MongoDB"]
       },
       {
         id: "project2",
-        title: "个人博客系统",
-        description: "使用Vue.js和Express开发的个人博客系统，支持文章发布、分类管理、评论功能。采用响应式设计，适配多种设备。",
-        image: "./img/background3.jpg",
-        techs: ["Vue.js", "Express", "MySQL"]
+        title: "助老志愿者服务平台 | 全栈 | 在校项目 | 省级奖项",
+        description: `获得
+        辽宁省教育厅办公室2024年国家及省级大学生创新训练计划立项 省级立项 \n
+        2024 年辽宁省普通高等学校大学生微信小程序应用开发大赛 省级二等奖 \n
+        2024 年辽宁省普通高等学校大学生移动应用开发大赛 省级三等奖 等多项奖项。\n`,
+        image: "./img/background2.jpg",
+        techs: ["Vue.js", "uni-app", "Spring MVC", "Node.js", "fast API", "MySQL"]
       },
       {
-        id: "project3",
-        title: "在线学习平台",
-        description: "基于React和Node.js开发的在线学习平台，支持视频播放、课程管理、用户互动等功能，为学习者提供优质的在线教育体验。",
-        image: "./img/background4.jpg",
-        techs: ["React", "Node.js", "WebRTC"]
+        id: "project1",
+        title: "个人博客系统",
+        description: "使用H5原生开发的个人博客系统，静态资源页面。",
+        image: "./img/background3.jpg",
+        techs: ["HTML5", "CSS3", "JavaScript"]
       }
     ],
     view_demo: "查看演示",
@@ -169,30 +166,24 @@ const langConfig = {
         period: "2018 - 2022",
         degree: "Bachelor of Computer Science and Technology",
         description: "Majoring in Computer Science and Technology, studied core courses including data structures, algorithms, databases, and network programming. Actively participated in programming competitions and project practices during university, developing solid programming foundation and problem-solving abilities."
-      },
-      {
-        university: "Example High School",
-        period: "2014 - 2018",
-        degree: "Science Class",
-        description: "Focused on science subjects in high school, developed good logical thinking skills and mathematical foundation, laying a solid groundwork for subsequent computer studies."
       }
     ],
     
     // 工作经历
     experience: [
       {
-        company: "Example Tech Company",
-        period: "2022.06 - Present",
-        position: "Frontend Developer",
-        description: "Responsible for the development of the HarmonyOS version of 'Zhi Hui Shen Gong APP', using technologies such as ArkTS and Spring Boot. Participated in product requirement analysis, technical solution design, and collaborated with the backend team to complete the project development.",
-        skills: ["ArkTS", "Spring Boot", "Node.js"]
+        company: "Shenyang Institute of Technology Modern Technology Service Center",
+        period: "2025.07 - Present",
+        position: "Full Stack Developer",
+        description: "Participated in the development of HarmonyOS version of 'Smart Shenyang Institute of Technology', implemented using ArkTS, Spring Boot and other technologies. Participated in the development of art troupe management system, implemented using Vue and Spring Boot technologies.",
+        skills: ["TypeScript", "JavaScript", "Spring Boot", "Vue3.js", "React", "MySQL"]
       },
       {
-        company: "Internship Company",
-        period: "2021.06 - 2021.12",
+        company: "Shenyang Institute of Technology Huawei Industry Academy",
+        period: "2025.03 - 2025.06",
         position: "Frontend Development Intern",
-        description: "During the internship, participated in the development of multiple frontend projects, learned modern frontend development technology stack, including React, Vue.js and other frameworks, accumulated rich project experience.",
-        skills: ["HTML/CSS", "JavaScript", "React"]
+        description: "During the internship, participated in the page development of the mental health education platform frontend project, learned modern frontend development technology stack, ArkTS framework, and accumulated project experience.",
+        skills: ["ArkTS", "AJAX", "TypeScript"]
       }
     ],
     
@@ -201,25 +192,25 @@ const langConfig = {
     // 项目列表
     projects_list: [
       {
-        id: "project1",
-        title: "E-commerce Management System",
-        description: "E-commerce management system developed with React and Node.js, including product management, order processing, user management and other functional modules. Adopts frontend-backend separation architecture and uses MongoDB for data storage.",
+        id: "project3",
+        title: "Smart Learning Platform | Full Stack | School Project | Graduation Design | In Development",
+        description: "Intelligent teaching platform developed based on Spring AI technology stack, integrating smart question bank generation, online exam evaluation, personalized learning recommendations and other functions to enhance teaching efficiency and learning experience.",
         image: "./img/background2.jpg",
-        techs: ["React", "Node.js", "MongoDB"]
+        techs: ["ArkTS", "React", "Spring AI", "Spring Boot", "MongoDB"]
       },
       {
         id: "project2",
-        title: "Personal Blog System",
-        description: "Personal blog system developed with Vue.js and Express, supporting article publishing, category management, and comment functionality. Features responsive design and adapts to multiple devices.",
-        image: "./img/background3.jpg",
-        techs: ["Vue.js", "Express", "MySQL"]
+        title: "Elderly Volunteer Service Platform | Full Stack | School Project | Provincial Awards",
+        description: "Awarded provincial-level project approval in the 2024 National and Provincial College Student Innovation Training Program by Liaoning Provincial Department of Education Office, provincial second prize in the 2024 Liaoning Province College Student WeChat Mini Program Application Development Competition, and provincial third prize in the 2024 Liaoning Province College Student Mobile Application Development Competition, among other awards.",
+        image: "./img/background2.jpg",
+        techs: ["Vue.js", "uni-app", "Spring MVC", "Node.js", "fast API", "MySQL"]
       },
       {
-        id: "project3",
-        title: "Online Learning Platform",
-        description: "Online learning platform developed with React and Node.js, supporting video playback, course management, and user interaction features. Provides quality online educational experiences for learners.",
-        image: "./img/background4.jpg",
-        techs: ["React", "Node.js", "WebRTC"]
+        id: "project1",
+        title: "Personal Blog System",
+        description: "Personal blog system developed with native H5, static resource page.",
+        image: "./img/background3.jpg",
+        techs: ["HTML5", "CSS3", "JavaScript"]
       }
     ],
     view_demo: "View Demo",
