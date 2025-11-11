@@ -11,7 +11,7 @@ const langConfig = {
     // 导航菜单
     home: "首页",
     nav_education: "教育经历",
-    experience: "工作经历",
+    nav_experience: "工作经历",
     projects: "项目经历",
     skills: "技术栈",
     resources: "资源",
@@ -38,13 +38,22 @@ const langConfig = {
     ],
     
     // 工作经历
-    exp_company1: "沈阳工学院 现代化技术服务中心",
-    exp_period1: "2025.07 - 至今",
-    exp_position1: "全栈开发工程师",
-    exp_description1: "负责公司鸿蒙版《智慧沈工》开发工作，使用ArkTS Spring Boot等技术实现。参与产品需求分析、技术方案设计，并与后端团队协作完成项目开发。",
-    exp_skill1: "ArkTS",
-    exp_skill2: "Spring Boot",
-    exp_skill3: "Node.js",
+    experience: [
+      {
+        company: "沈阳工学院 现代化技术服务中心",
+        period: "2025.07 - 至今",
+        position: "全栈开发工程师",
+        description: "负责公司鸿蒙版《智慧沈工》开发工作，使用ArkTS Spring Boot等技术实现。参与产品需求分析、技术方案设计，并与后端团队协作完成项目开发。",
+        skills: ["ArkTS", "Spring Boot", "Node.js"]
+      },
+      {
+        company: "实习公司",
+        period: "2021.06 - 2021.12",
+        position: "前端开发实习生",
+        description: "在实习期间参与了多个前端项目的开发，学习了现代前端开发技术栈，包括React、Vue.js等框架的使用，积累了丰富的项目经验。",
+        skills: ["HTML/CSS", "JavaScript", "React"]
+      }
+    ],
     
     // 项目经历
     project1_title: "电商管理系统",
@@ -80,7 +89,7 @@ const langConfig = {
     // 导航菜单
     home: "Home",
     nav_education: "Education",
-    experience: "Experience",
+    nav_experience: "Experience",
     projects: "Projects",
     skills: "Skills",
     resources: "Resources",
@@ -107,13 +116,22 @@ const langConfig = {
     ],
     
     // 工作经历
-    exp_company1: "Example Tech Company",
-    exp_period1: "2022.06 - Present",
-    exp_position1: "Frontend Developer",
-    exp_description1: "Responsible for the development of the HarmonyOS version of 'Zhi Hui Shen Gong APP', using technologies such as ArkTS and Spring Boot. Participated in product requirement analysis, technical solution design, and collaborated with the backend team to complete the project development.",
-    exp_skill1: "ArkTS",
-    exp_skill2: "Spring Boot",
-    exp_skill3: "Node.js",
+    experience: [
+      {
+        company: "Example Tech Company",
+        period: "2022.06 - Present",
+        position: "Frontend Developer",
+        description: "Responsible for the development of the HarmonyOS version of 'Zhi Hui Shen Gong APP', using technologies such as ArkTS and Spring Boot. Participated in product requirement analysis, technical solution design, and collaborated with the backend team to complete the project development.",
+        skills: ["ArkTS", "Spring Boot", "Node.js"]
+      },
+      {
+        company: "Internship Company",
+        period: "2021.06 - 2021.12",
+        position: "Frontend Development Intern",
+        description: "During the internship, participated in the development of multiple frontend projects, learned modern frontend development technology stack, including React, Vue.js and other frameworks, accumulated rich project experience.",
+        skills: ["HTML/CSS", "JavaScript", "React"]
+      }
+    ],
     
     // 项目经历
     project1_title: "E-commerce Management System",

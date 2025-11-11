@@ -7,6 +7,18 @@ function setLanguage(lang) {
   // 确保config存在
   if (!config) return;
   
+  // 首先设置所有带有data-lang属性的元素
+  document.querySelectorAll('[data-lang]').forEach(element => {
+    const key = element.getAttribute('data-lang');
+    // 直接从配置中获取值，但跳过education和experience数组属性
+    if (key !== 'education' && key !== 'experience' && config[key] !== undefined) {
+      // 确保值不是对象或数组，避免显示[object Object]
+      if (typeof config[key] !== 'object' || config[key] === null) {
+        element.textContent = config[key];
+      }
+    }
+  });
+  
   // 特殊处理教育经历页面 - 动态渲染时间线
   const educationSection = document.getElementById('education');
   if (educationSection && config.education && Array.isArray(config.education)) {
@@ -33,17 +45,42 @@ function setLanguage(lang) {
     }
   }
   
-  // 处理其他带有data-lang属性的元素
-  document.querySelectorAll('[data-lang]').forEach(element => {
-    const key = element.getAttribute('data-lang');
-    // 直接从配置中获取值
-    let value = config[key];
-    
-    // 如果找到值，则设置元素内容
-    if (value !== undefined) {
-      element.textContent = value;
+  // 特殊处理工作经历页面 - 动态渲染工作经历卡片
+  const experienceSection = document.getElementById('experience');
+  if (experienceSection && config.experience && Array.isArray(config.experience)) {
+    const experienceGrid = experienceSection.querySelector('.experience-grid');
+    if (experienceGrid) {
+      // 清空现有内容，但保留section-title
+      experienceGrid.innerHTML = '';
+      
+      // 遍历工作经历数组，动态创建工作经历卡片
+      config.experience.forEach((exp, index) => {
+        const experienceCard = document.createElement('div');
+        experienceCard.className = 'experience-card';
+        
+        // 构建技能标签HTML
+        let skillsHTML = '';
+        if (exp.skills && Array.isArray(exp.skills)) {
+          exp.skills.forEach(skill => {
+            skillsHTML += `<span class="skill-tag">${skill}</span>`;
+          });
+        }
+        
+        experienceCard.innerHTML = `
+          <div class="card-header">
+            <h3>${exp.company}</h3>
+            <span class="card-period">${exp.period}</span>
+          </div>
+          <div class="card-position">${exp.position}</div>
+          <div class="card-description">${exp.description}</div>
+          <div class="card-skills">
+            ${skillsHTML}
+          </div>
+        `;
+        experienceGrid.appendChild(experienceCard);
+      });
     }
-  });
+  }
 }
 
 // 切换语言
