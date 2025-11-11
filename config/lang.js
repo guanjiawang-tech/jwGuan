@@ -137,6 +137,143 @@ const langConfig = {
     // 移动端菜单
     language: "语言"
   },
+  ja: {
+    // 基本情報
+    username: "関佳旺",
+    language: "言語",
+    english: "英語",
+    chinese: "中国語",
+    university: "瀋陽工学院",
+    profession: "コンピュータサイエンス・テクノロジー",
+    
+    // ナビゲーションメニュー
+    home: "ホーム",
+    nav_education: "教育歴",
+    nav_experience: "職務経験",
+    projects: "プロジェクト経験",
+    skills: "スキル",
+    resources: "リソース",
+    
+    // ホームページコンテンツ
+    hero_desc: "プログラミングを熱愛し、フロントエンド開発とフルスタック技術に特化。純粋なコンピュータ科学の基礎知識と豊富なプロジェクト経験を持ち、優れたユーザーエクスペリエンスの創造に取り組んでいます。",
+    view_projects: "プロジェクトを見る",
+    view_skills: "スキル",
+    
+    // 教育歴
+    education: [
+      {
+        university: "瀋陽工学院",
+        period: "2018 - 2022",
+        degree: "コンピュータサイエンス・テクノロジー 学士",
+        description: "コンピュータサイエンス・テクノロジーを専攻し、データ構造、アルゴリズム、データベース、ネットワークプログラミングなどの中核科目を学びました。大学在学中は様々なプログラミングコンテストやプロジェクト実践に積極的に参加し、堅牢なプログラミングの基礎と問題解決能力を養いました。"
+      }
+    ],
+    
+    // 職務経験
+    experience: [
+      {
+        company: "瀋陽工学院 現代化技術サービスセンター",
+        period: "2025.07 - 現在",
+        position: "フルスタック開発エンジニア",
+        description: "HarmonyOS版『スマート瀋陽工学』の開発に参加し、ArkTS、Spring Bootなどの技術を使用して実装。芸術団管理システムの開発にも参加し、Vue、Spring Bootなどの技術を使用して実装。",
+        skills: ["TypeScript", "JavaScript", "Spring Boot", "Vue3.js", "React", "MySQL"]
+      },
+      {
+        company: "瀋陽工学院 ファーウェイ産業学院",
+        period: "2025.03 - 2025.06",
+        position: "フロントエンド開発インターン",
+        description: "インターンシップ中、精神健康教育プラットフォームのフロントエンドプロジェクトのページ開発に参加し、現代的なフロントエンド開発技術スタック、ArkTSフレームワークを学び、プロジェクト経験を積みました。",
+        skills: ["ArkTS", "AJAX", "TypeScript"]
+      }
+    ],
+    
+    // プロジェクト経験タイトル
+    projects: "プロジェクト経験",
+    // プロジェクトリスト
+    projects_list: [
+      {
+        id: "project3",
+        title: "Smart Learning スマート教育プラットフォーム | フルスタック | 大学プロジェクト | 卒業設計 | 開発中",
+        description: `Spring AI技術スタックに基づいて開発されたスマート教育プラットフォームで、智能問題バンク生成、オンラインテスト評価、個別化学習推奨などの機能を統合し、教育効率と学習体験を向上させます。\n`,
+        image: "./img/background2.jpg",
+        techs: ["ArkTS", "React", "Spring AI", "Spring Boot", "MongoDB"]
+      },
+      {
+        id: "project2",
+        title: "高齢者ボランティアサービスプラットフォーム | フルスタック | 大学プロジェクト | 省レベル賞",
+        description: `遼寧省教育庁弁公室2024年国家及び省レベル大学生革新訓練計画立案 省レベル立案 \n
+        2024年遼寧省普通高等学校大学生WeChatミニプログラムアプリケーション開発コンテスト 省レベル二等賞 \n
+        2024年遼寧省普通高等学校大学生モバイルアプリケーション開発コンテスト 省レベル三等賞 など複数の賞を受賞。\n`,
+        image: "./img/background2.jpg",
+        techs: ["Vue.js", "uni-app", "Spring MVC", "Node.js", "fast API", "MySQL"]
+      },
+      {
+        id: "project1",
+        title: "パーソナルブログシステム",
+        description: "H5ネイティブで開発されたパーソナルブログシステム、静的リソースページ。",
+        image: "./img/background3.jpg",
+        techs: ["HTML5", "CSS3", "JavaScript"]
+      }
+    ],
+    view_demo: "デモを見る",
+    view_code: "コードを見る",
+    
+    // スキルタイトル
+    frontend_skills: "フロントエンド技術",
+    backend_skills: "バックエンド技術",
+    tools_skills: "開発ツール",
+    // スキルリスト
+    skills_list: [
+      {
+        category: "frontend_skills",
+        items: [
+          { name: "HTML5", icon: "fab fa-html5" },
+          { name: "CSS3", icon: "fab fa-css3-alt" },
+          { name: "JavaScript", icon: "fab fa-js-square" },
+          { name: "React", icon: "fab fa-react" },
+          { name: "Vue.js", icon: "fab fa-vue" },
+          { name: "Angular", icon: "fab fa-angular" },
+          { name: "Sass", icon: "fab fa-sass" },
+          { name: "Bootstrap", icon: "fab fa-bootstrap" }
+        ]
+      },
+      {
+        category: "backend_skills",
+        items: [
+          { name: "Node.js", icon: "fab fa-node-js" },
+          { name: "Python", icon: "fab fa-python" },
+          { name: "MySQL", icon: "fas fa-database" },
+          { name: "MongoDB", icon: "fas fa-server" },
+          { name: "Express", icon: "fas fa-code" },
+          { name: "Django", icon: "fas fa-code" },
+          { name: "Redis", icon: "fas fa-code" },
+          { name: "PostgreSQL", icon: "fas fa-code" }
+        ]
+      },
+      {
+        category: "tools_skills",
+        items: [
+          { name: "Git", icon: "fab fa-git-alt" },
+          { name: "Docker", icon: "fab fa-docker" },
+          { name: "AWS", icon: "fab fa-aws" },
+          { name: "VS Code", icon: "fas fa-code" },
+          { name: "Webpack", icon: "fas fa-code" },
+          { name: "Babel", icon: "fas fa-code" },
+          { name: "Jest", icon: "fas fa-code" },
+          { name: "ESLint", icon: "fas fa-code" }
+        ]
+      }
+    ],
+    
+    // リソースページ
+    learning_resources: "学習リソース",
+    tools_recommendations: "ツール推奨",
+    contact_info: "連絡先情報",
+    download_resources: "リソースをダウンロード",
+    
+    // モバイルメニュー
+    language: "言語"
+  },
   en: {
     // 基本信息
     username: "J·Wang Guan",
