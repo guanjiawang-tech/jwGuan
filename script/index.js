@@ -10,8 +10,8 @@ function setLanguage(lang) {
   // 首先设置所有带有data-lang属性的元素
   document.querySelectorAll('[data-lang]').forEach(element => {
     const key = element.getAttribute('data-lang');
-    // 直接从配置中获取值，但跳过education和experience数组属性
-    if (key !== 'education' && key !== 'experience' && config[key] !== undefined) {
+    // 直接从配置中获取值，但跳过数组属性
+    if (key !== 'education' && key !== 'experience' && key !== 'projects_list' && key !== 'skills_list' && config[key] !== undefined) {
       // 确保值不是对象或数组，避免显示[object Object]
       if (typeof config[key] !== 'object' || config[key] === null) {
         element.textContent = config[key];
@@ -78,6 +78,91 @@ function setLanguage(lang) {
           </div>
         `;
         experienceGrid.appendChild(experienceCard);
+      });
+    }
+  }
+  
+  // 特殊处理项目经历页面 - 动态渲染项目卡片
+  const projectsSection = document.getElementById('projects');
+  if (projectsSection && config.projects_list && Array.isArray(config.projects_list)) {
+    const projectsGrid = projectsSection.querySelector('.projects-grid');
+    if (projectsGrid) {
+      // 清空现有内容，但保留section-title
+      projectsGrid.innerHTML = '';
+      
+      // 遍历项目数组，动态创建项目卡片
+      config.projects_list.forEach((project, index) => {
+        const projectCard = document.createElement('div');
+        projectCard.className = 'project-card';
+        
+        // 构建技术标签HTML
+        let techsHTML = '';
+        if (project.techs && Array.isArray(project.techs)) {
+          project.techs.forEach(tech => {
+            techsHTML += `<span class="tech-tag">${tech}</span>`;
+          });
+        }
+        
+        projectCard.innerHTML = `
+          <div class="project-image">
+            <img src="${project.image}" alt="${project.title}" />
+            <div class="project-overlay">
+              <div class="project-links">
+                <button class="project-link" onclick="openProjectModal('${project.id}')" data-lang="view_demo">${config.view_demo}</button>
+                <button class="project-link" onclick="openProjectModal('${project.id}')" data-lang="view_code">${config.view_code}</button>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+            <div class="project-tech">
+              ${techsHTML}
+            </div>
+          </div>
+        `;
+        projectsGrid.appendChild(projectCard);
+      });
+    }
+  }
+  
+  // 特殊处理技能页面 - 动态渲染技术栈
+  const skillsSection = document.getElementById('skills');
+  if (skillsSection && config.skills_list && Array.isArray(config.skills_list)) {
+    const skillsContainer = skillsSection.querySelector('.skills-container');
+    if (skillsContainer) {
+      // 清空现有内容，但保留section-title
+      skillsContainer.innerHTML = '';
+      
+      // 遍历技能数组，动态创建技能分类和项目
+      config.skills_list.forEach((skillCategory, index) => {
+        const categoryElement = document.createElement('div');
+        categoryElement.className = 'skill-category';
+        
+        // 创建分类标题
+        const categoryTitle = document.createElement('h3');
+        categoryTitle.textContent = config[skillCategory.category] || skillCategory.category;
+        categoryElement.appendChild(categoryTitle);
+        
+        // 创建技能项容器
+        const skillItems = document.createElement('div');
+        skillItems.className = 'skill-items';
+        
+        // 遍历技能项
+        skillCategory.items.forEach(skill => {
+          const skillItem = document.createElement('div');
+          skillItem.className = 'skill-item';
+          
+          skillItem.innerHTML = `
+            <i class="${skill.icon}"></i>
+            <span>${skill.name}</span>
+          `;
+          
+          skillItems.appendChild(skillItem);
+        });
+        
+        categoryElement.appendChild(skillItems);
+        skillsContainer.appendChild(categoryElement);
       });
     }
   }

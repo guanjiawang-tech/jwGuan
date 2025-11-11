@@ -55,18 +55,81 @@ const langConfig = {
       }
     ],
     
-    // 项目经历
-    project1_title: "电商管理系统",
-    project1_description: "基于React和Node.js开发的电商管理系统，包含商品管理、订单处理、用户管理等功能模块。采用前后端分离架构，使用MongoDB存储数据。",
-    project2_title: "个人博客系统",
-    project2_description: "使用Vue.js和Express开发的个人博客系统，支持文章发布、分类管理、评论功能。采用响应式设计，适配多种设备。",
+    // 项目经历标题
+    projects: "项目经历",
+    // 项目列表
+    projects_list: [
+      {
+        id: "project1",
+        title: "电商管理系统",
+        description: "基于React和Node.js开发的电商管理系统，包含商品管理、订单处理、用户管理等功能模块。采用前后端分离架构，使用MongoDB存储数据。",
+        image: "./img/background2.jpg",
+        techs: ["React", "Node.js", "MongoDB"]
+      },
+      {
+        id: "project2",
+        title: "个人博客系统",
+        description: "使用Vue.js和Express开发的个人博客系统，支持文章发布、分类管理、评论功能。采用响应式设计，适配多种设备。",
+        image: "./img/background3.jpg",
+        techs: ["Vue.js", "Express", "MySQL"]
+      },
+      {
+        id: "project3",
+        title: "在线学习平台",
+        description: "基于React和Node.js开发的在线学习平台，支持视频播放、课程管理、用户互动等功能，为学习者提供优质的在线教育体验。",
+        image: "./img/background4.jpg",
+        techs: ["React", "Node.js", "WebRTC"]
+      }
+    ],
     view_demo: "查看演示",
     view_code: "查看代码",
     
-    // 技术栈
+    // 技术栈标题
     frontend_skills: "前端技术",
     backend_skills: "后端技术",
     tools_skills: "开发工具",
+    // 技术栈数组
+    skills_list: [
+      {
+        category: "frontend_skills",
+        items: [
+          { name: "HTML5", icon: "fab fa-html5" },
+          { name: "CSS3", icon: "fab fa-css3-alt" },
+          { name: "JavaScript", icon: "fab fa-js-square" },
+          { name: "React", icon: "fab fa-react" },
+          { name: "Vue.js", icon: "fab fa-vue" },
+          { name: "Angular", icon: "fab fa-angular" },
+          { name: "Sass", icon: "fab fa-sass" },
+          { name: "Bootstrap", icon: "fab fa-bootstrap" }
+        ]
+      },
+      {
+        category: "backend_skills",
+        items: [
+          { name: "Node.js", icon: "fab fa-node-js" },
+          { name: "Python", icon: "fab fa-python" },
+          { name: "MySQL", icon: "fas fa-database" },
+          { name: "MongoDB", icon: "fas fa-server" },
+          { name: "Express", icon: "fas fa-code" },
+          { name: "Django", icon: "fas fa-code" },
+          { name: "Redis", icon: "fas fa-code" },
+          { name: "PostgreSQL", icon: "fas fa-code" }
+        ]
+      },
+      {
+        category: "tools_skills",
+        items: [
+          { name: "Git", icon: "fab fa-git-alt" },
+          { name: "Docker", icon: "fab fa-docker" },
+          { name: "AWS", icon: "fab fa-aws" },
+          { name: "VS Code", icon: "fas fa-code" },
+          { name: "Webpack", icon: "fas fa-code" },
+          { name: "Babel", icon: "fas fa-code" },
+          { name: "Jest", icon: "fas fa-code" },
+          { name: "ESLint", icon: "fas fa-code" }
+        ]
+      }
+    ],
     
     // 资源页面
     learning_resources: "学习资源",
@@ -133,18 +196,81 @@ const langConfig = {
       }
     ],
     
-    // 项目经历
-    project1_title: "E-commerce Management System",
-    project1_description: "E-commerce management system developed with React and Node.js, including product management, order processing, user management and other functional modules. Adopts frontend-backend separation architecture and uses MongoDB for data storage.",
-    project2_title: "Personal Blog System",
-    project2_description: "Personal blog system developed with Vue.js and Express, supporting article publishing, category management, and comment functionality. Features responsive design and adapts to multiple devices.",
+    // 项目经历标题
+    projects: "Projects",
+    // 项目列表
+    projects_list: [
+      {
+        id: "project1",
+        title: "E-commerce Management System",
+        description: "E-commerce management system developed with React and Node.js, including product management, order processing, user management and other functional modules. Adopts frontend-backend separation architecture and uses MongoDB for data storage.",
+        image: "./img/background2.jpg",
+        techs: ["React", "Node.js", "MongoDB"]
+      },
+      {
+        id: "project2",
+        title: "Personal Blog System",
+        description: "Personal blog system developed with Vue.js and Express, supporting article publishing, category management, and comment functionality. Features responsive design and adapts to multiple devices.",
+        image: "./img/background3.jpg",
+        techs: ["Vue.js", "Express", "MySQL"]
+      },
+      {
+        id: "project3",
+        title: "Online Learning Platform",
+        description: "Online learning platform developed with React and Node.js, supporting video playback, course management, and user interaction features. Provides quality online educational experiences for learners.",
+        image: "./img/background4.jpg",
+        techs: ["React", "Node.js", "WebRTC"]
+      }
+    ],
     view_demo: "View Demo",
     view_code: "View Code",
     
-    // 技术栈
+    // 技术栈标题
     frontend_skills: "Frontend Technologies",
     backend_skills: "Backend Technologies",
     tools_skills: "Development Tools",
+    // 技术栈数组
+    skills_list: [
+      {
+        category: "frontend_skills",
+        items: [
+          { name: "HTML5", icon: "fab fa-html5" },
+          { name: "CSS3", icon: "fab fa-css3-alt" },
+          { name: "JavaScript", icon: "fab fa-js-square" },
+          { name: "React", icon: "fab fa-react" },
+          { name: "Vue.js", icon: "fab fa-vue" },
+          { name: "Angular", icon: "fab fa-angular" },
+          { name: "Sass", icon: "fab fa-sass" },
+          { name: "Bootstrap", icon: "fab fa-bootstrap" }
+        ]
+      },
+      {
+        category: "backend_skills",
+        items: [
+          { name: "Node.js", icon: "fab fa-node-js" },
+          { name: "Python", icon: "fab fa-python" },
+          { name: "MySQL", icon: "fas fa-database" },
+          { name: "MongoDB", icon: "fas fa-server" },
+          { name: "Express", icon: "fas fa-code" },
+          { name: "Django", icon: "fas fa-code" },
+          { name: "Redis", icon: "fas fa-code" },
+          { name: "PostgreSQL", icon: "fas fa-code" }
+        ]
+      },
+      {
+        category: "tools_skills",
+        items: [
+          { name: "Git", icon: "fab fa-git-alt" },
+          { name: "Docker", icon: "fab fa-docker" },
+          { name: "AWS", icon: "fab fa-aws" },
+          { name: "VS Code", icon: "fas fa-code" },
+          { name: "Webpack", icon: "fas fa-code" },
+          { name: "Babel", icon: "fas fa-code" },
+          { name: "Jest", icon: "fas fa-code" },
+          { name: "ESLint", icon: "fas fa-code" }
+        ]
+      }
+    ],
     
     // 资源页面
     learning_resources: "Learning Resources",
