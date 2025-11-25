@@ -54,11 +54,22 @@ const langConfig = {
     // 项目列表
     projects_list: [
       {
+        id: "project4",
+        title: "《沈工智校》 | 上线项目 | 实习项目 | 团队项目",
+        description: `根据现有的《沈工智校》移动端(CloudAPI)开发鸿蒙版的项目，已经成功上线到华为应用商城\n`,
+        image: "./img/background2.jpg",
+        techs: ["ArkTS", "HarmonyOS", "Spring Boot", "Oracle"],
+        demo_text: "展示部分公开页面以及上线图片",
+        code_text: "其他公司的知识产权无法展示源代码，有问题请跳转到资源发邮箱联系我"
+      },
+      {
         id: "project3",
         title: "Smart Learning 智慧教学平台 | 全栈 | 在校项目 | 毕业设计 | 开发中",
         description: `基于Spring AI技术栈开发的智慧教学平台，集成了智能题库生成、在线考试评测、个性化学习推荐等功能，提升教学效率和学习体验。\n`,
         image: "./img/background2.jpg",
-        techs: ["ArkTS", "React", "Spring AI", "Spring Boot", "MongoDB"]
+        techs: ["ArkTS", "React", "Spring AI", "Spring Boot", "MongoDB"],
+        demo_text: "项目正在开发中，预计2026年7月完成演示。",
+        code_text: "代码目前在私有仓库中，完成后并且完成毕业将开放部分核心模块代码。"
       },
       {
         id: "project2",
@@ -68,14 +79,18 @@ const langConfig = {
         2024 年辽宁省普通高等学校大学生微信小程序应用开发大赛 省级二等奖 \n
         2024 年辽宁省普通高等学校大学生移动应用开发大赛 省级三等奖 等多项奖项。\n`,
         image: "./img/background2.jpg",
-        techs: ["Vue.js", "uni-app", "Spring MVC", "Node.js", "fast API", "MySQL"]
+        techs: ["Vue.js", "uni-app", "Spring MVC", "Node.js", "fast API", "MySQL"],
+        demo_text: "平台包含志愿者注册、老人需求发布、服务匹配、活动管理等核心功能模块。",
+        code_text: "前端使用Vue.js + uni-app构建，后端采用Spring MVC + Node.js架构，数据库使用MySQL。"
       },
       {
         id: "project1",
         title: "个人博客系统",
         description: "使用H5原生开发的个人博客系统，静态资源页面。",
         image: "./img/background3.jpg",
-        techs: ["HTML5", "CSS3", "JavaScript"]
+        techs: ["HTML5", "CSS3", "JavaScript"],
+        demo_text: "支持文章发布、分类管理、评论互动等基础博客功能。",
+        code_text: "纯前端实现，使用HTML5语义化标签，CSS3实现响应式布局，JavaScript实现交互功能。"
       }
     ],
     view_demo: "查看演示",
@@ -186,11 +201,22 @@ const langConfig = {
     // プロジェクトリスト
     projects_list: [
       {
+        id: "project4",
+        title: "「沈工智校」 | リリースプロジェクト | インターンシッププロジェクト | チームプロジェクト",
+        description: `既存の「沈工智校」モバイル版(CloudAPI)に基づいてHarmonyOS版を開発し、华为アプリストアに正常にリリースされました\n`,
+        image: "./img/background2.jpg",
+        techs: ["ArkTS", "HarmonyOS", "Spring Boot", "Oracle"],
+        demo_text: "一部の公開ページとリリース画像を展示します",
+        code_text: "他社の知的財産権のため、ソースコードを展示できません。質問がある場合はリソースページからメールでお問い合わせください"
+      },
+      {
         id: "project3",
         title: "Smart Learning スマート教育プラットフォーム | フルスタック | 大学プロジェクト | 卒業設計 | 開発中",
         description: `Spring AI技術スタックに基づいて開発されたスマート教育プラットフォームで、智能問題バンク生成、オンラインテスト評価、個別化学習推奨などの機能を統合し、教育効率と学習体験を向上させます。\n`,
         image: "./img/background2.jpg",
-        techs: ["ArkTS", "React", "Spring AI", "Spring Boot", "MongoDB"]
+        techs: ["ArkTS", "React", "Spring AI", "Spring Boot", "MongoDB"],
+        demo_text: "プロジェクトは開発中で、2026年7月にデモが完成予定です。",
+        code_text: "コードは現在プライベートリポジトリにあり、完成後に卒業を終えてから一部のコアモジュールのコードを公開する予定です。"
       },
       {
         id: "project2",
@@ -199,14 +225,18 @@ const langConfig = {
         2024年遼寧省普通高等学校大学生WeChatミニプログラムアプリケーション開発コンテスト 省レベル二等賞 \n
         2024年遼寧省普通高等学校大学生モバイルアプリケーション開発コンテスト 省レベル三等賞 など複数の賞を受賞。\n`,
         image: "./img/background2.jpg",
-        techs: ["Vue.js", "uni-app", "Spring MVC", "Node.js", "fast API", "MySQL"]
+        techs: ["Vue.js", "uni-app", "Spring MVC", "Node.js", "fast API", "MySQL"],
+        demo_text: "プラットフォームにはボランティア登録、高齢者ニーズ発信、サービスマッチング、活動管理などのコア機能モジュールが含まれています。",
+        code_text: "フロントエンドはVue.js + uni-appで構築され、バックエンドはSpring MVC + Node.jsアーキテクチャを採用し、データベースにはMySQLを使用しています。"
       },
       {
         id: "project1",
         title: "パーソナルブログシステム",
         description: "H5ネイティブで開発されたパーソナルブログシステム、静的リソースページ。",
         image: "./img/background3.jpg",
-        techs: ["HTML5", "CSS3", "JavaScript"]
+        techs: ["HTML5", "CSS3", "JavaScript"],
+        demo_text: "記事の公開、カテゴリ管理、コメントインタラクションなどの基本的なブログ機能をサポートしています。",
+        code_text: "フロントエンドのみで実装され、HTML5セマンティックタグを使用し、CSS3でレスポンシブレイアウトを実現し、JavaScriptでインタラクティブ機能を実装しています。"
       }
     ],
     view_demo: "デモを見る",
@@ -317,25 +347,40 @@ const langConfig = {
     // 项目列表
     projects_list: [
       {
+        id: "project4",
+        title: "Shen Gong Zhi Xiao | Released Project | Internship Project | Team Project",
+        description: "Developed a HarmonyOS version based on the existing ‘Shen Gong Zhi Xiao’ mobile version (CloudAPI), successfully released on Huawei AppGallery\n",
+        image: "./img/background2.jpg",
+        techs: ["ArkTS", "HarmonyOS", "Spring Boot", "Oracle"],
+        demo_text: "Display some public pages and release images",
+        code_text: "Cannot show source code due to other company's intellectual property rights. Please contact me via email from the resources page if you have any questions"
+      },
+      {
         id: "project3",
         title: "Smart Learning Platform | Full Stack | School Project | Graduation Design | In Development",
         description: "Intelligent teaching platform developed based on Spring AI technology stack, integrating smart question bank generation, online exam evaluation, personalized learning recommendations and other functions to enhance teaching efficiency and learning experience.",
         image: "./img/background2.jpg",
-        techs: ["ArkTS", "React", "Spring AI", "Spring Boot", "MongoDB"]
+        techs: ["ArkTS", "React", "Spring AI", "Spring Boot", "MongoDB"],
+        demo_text: "The project is under development, and the demo is expected to be completed in July 2026.",
+        code_text: "The code is currently in a private repository, and after completion and graduation, some core module code will be opened."
       },
       {
         id: "project2",
         title: "Elderly Volunteer Service Platform | Full Stack | School Project | Provincial Awards",
         description: "Awarded provincial-level project approval in the 2024 National and Provincial College Student Innovation Training Program by Liaoning Provincial Department of Education Office, provincial second prize in the 2024 Liaoning Province College Student WeChat Mini Program Application Development Competition, and provincial third prize in the 2024 Liaoning Province College Student Mobile Application Development Competition, among other awards.",
         image: "./img/background2.jpg",
-        techs: ["Vue.js", "uni-app", "Spring MVC", "Node.js", "fast API", "MySQL"]
+        techs: ["Vue.js", "uni-app", "Spring MVC", "Node.js", "fast API", "MySQL"],
+        demo_text: "The platform includes core functional modules such as volunteer registration, elderly needs publishing, service matching, and activity management.",
+        code_text: "The frontend is built with Vue.js + uni-app, the backend adopts Spring MVC + Node.js architecture, and MySQL is used for the database."
       },
       {
         id: "project1",
         title: "Personal Blog System",
         description: "Personal blog system developed with native H5, static resource page.",
         image: "./img/background3.jpg",
-        techs: ["HTML5", "CSS3", "JavaScript"]
+        techs: ["HTML5", "CSS3", "JavaScript"],
+        demo_text: "Supports basic blog functions such as article publishing, category management, and comment interaction.",
+        code_text: "Implemented with pure frontend, using HTML5 semantic tags, CSS3 for responsive layout, and JavaScript for interactive functions."
       }
     ],
     view_demo: "View Demo",

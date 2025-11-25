@@ -108,8 +108,8 @@ function setLanguage(lang) {
             <img src="${project.image}" alt="${project.title}" />
             <div class="project-overlay">
               <div class="project-links">
-                <button class="project-link" onclick="openProjectModal('${project.id}')" data-lang="view_demo">${config.view_demo}</button>
-                <button class="project-link" onclick="openProjectModal('${project.id}')" data-lang="view_code">${config.view_code}</button>
+                <button class="project-link" onclick="openProjectModal('${project.id}', 'demo')" data-lang="view_demo">${config.view_demo}</button>
+                <button class="project-link" onclick="openProjectModal('${project.id}', 'code')" data-lang="view_code">${config.view_code}</button>
               </div>
             </div>
           </div>
@@ -869,25 +869,44 @@ export default MainScreen;`,
 };
 
 // 打开项目弹出层
-function openProjectModal(projectId) {
+function openProjectModal(projectId, tabName = 'demo') {
   const modal = document.getElementById('projectModal');
-  const project = projectData[projectId];
+  const config = langConfig[currentLang];
+  const project = config.projects_list.find(p => p.id === projectId);
   
   if (!project) return;
   
   // 更新弹出层内容
   document.getElementById('modalTitle').textContent = project.title;
-  document.getElementById('demoImage').src = project.demoImage;
-  document.getElementById('demoDescription').textContent = project.demoDescription;
-  document.getElementById('codePreview').textContent = project.code;
-  document.getElementById('projectLink').href = project.projectLink;
+  
+  // 从lang.js中获取demo_text和code_text
+  if (project.demo_text) {
+    document.getElementById('demoDescription').textContent = project.demo_text;
+  } else {
+    document.getElementById('demoDescription').textContent = config.view_demo + ' - ' + project.title;
+  }
+  
+  if (project.code_text) {
+    document.getElementById('codePreview').textContent = project.code_text;
+  } else {
+    document.getElementById('codePreview').textContent = config.view_code + ' - ' + project.title;
+  }
+  
+  // 如果项目有图片，更新演示图片
+  if (project.image) {
+    document.getElementById('demoImage').src = project.image;
+  }
+  
+  // 隐藏访问项目按钮，因为我们现在使用文本形式展示
+  const projectLinkBtn = document.getElementById('projectLink');
+  projectLinkBtn.style.display = 'none';
   
   // 显示弹出层
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
   
-  // 默认显示演示标签
-  switchModalTab('demo');
+  // 显示指定的标签
+  switchModalTab(tabName);
 }
 
 // 关闭项目弹出层
