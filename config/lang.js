@@ -82,48 +82,42 @@ const langConfig = {
     view_code: "查看代码",
     
     // 技术栈标题
-    frontend_skills: "前端技术",
-    backend_skills: "后端技术",
-    tools_skills: "开发工具",
+    frontend_skills: "前端框架",
+    backend_skills: "后端框架",
+    tools_skills: "开发语言及技术",
     // 技术栈数组
     skills_list: [
       {
         category: "frontend_skills",
         items: [
-          { name: "HTML5", icon: "fab fa-html5" },
-          { name: "CSS3", icon: "fab fa-css3-alt" },
-          { name: "JavaScript", icon: "fab fa-js-square" },
           { name: "React", icon: "fab fa-react" },
-          { name: "Vue.js", icon: "fab fa-vue" },
-          { name: "Angular", icon: "fab fa-angular" },
-          { name: "Sass", icon: "fab fa-sass" },
-          { name: "Bootstrap", icon: "fab fa-bootstrap" }
+          { name: "Vue.js", icon: "fab fa-vuejs" },
+          { name: "React Native", icon: "fab fa-react" },
+          { name: "Uni-APP", icon: "fa-solid fa-code" },
+          { name: "Android(Kotlin)", icon: "fab fa-android" },
+          { name: "Harmony(ArkTS)", icon: "fa-solid fa-code" },
         ]
       },
       {
         category: "backend_skills",
         items: [
+          { name: "Spring AI", icon: "fa-brands fa-java" },
+          { name: "Spring Boot", icon: "fa-brands fa-java" },
+          { name: "Spring MVC", icon: "fa-brands fa-java" },
           { name: "Node.js", icon: "fab fa-node-js" },
-          { name: "Python", icon: "fab fa-python" },
-          { name: "MySQL", icon: "fas fa-database" },
-          { name: "MongoDB", icon: "fas fa-server" },
-          { name: "Express", icon: "fas fa-code" },
-          { name: "Django", icon: "fas fa-code" },
-          { name: "Redis", icon: "fas fa-code" },
-          { name: "PostgreSQL", icon: "fas fa-code" }
         ]
       },
       {
         category: "tools_skills",
         items: [
+          { name: "HTML5", icon: "fab fa-html5" },
+          { name: "CSS3", icon: "fab fa-css3-alt" },
+          { name: "Java", icon: "fa-brands fa-java" },
+          { name: "JavaScript", icon: "fab fa-js-square" },
+          { name: "TypeScript", icon: "fa-regular fa-file-code" },
           { name: "Git", icon: "fab fa-git-alt" },
-          { name: "Docker", icon: "fab fa-docker" },
-          { name: "AWS", icon: "fab fa-aws" },
-          { name: "VS Code", icon: "fas fa-code" },
-          { name: "Webpack", icon: "fas fa-code" },
-          { name: "Babel", icon: "fas fa-code" },
-          { name: "Jest", icon: "fas fa-code" },
-          { name: "ESLint", icon: "fas fa-code" }
+          { name: "MySQL", icon: "fas fa-database" },
+          { name: "MongoDB", icon: "fas fa-server" },
         ]
       }
     ],
@@ -221,46 +215,40 @@ const langConfig = {
     // スキルタイトル
     frontend_skills: "フロントエンド技術",
     backend_skills: "バックエンド技術",
-    tools_skills: "開発ツール",
+    tools_skills: "開発言語と技術",
     // スキルリスト
     skills_list: [
       {
         category: "frontend_skills",
         items: [
-          { name: "HTML5", icon: "fab fa-html5" },
-          { name: "CSS3", icon: "fab fa-css3-alt" },
-          { name: "JavaScript", icon: "fab fa-js-square" },
           { name: "React", icon: "fab fa-react" },
-          { name: "Vue.js", icon: "fab fa-vue" },
-          { name: "Angular", icon: "fab fa-angular" },
-          { name: "Sass", icon: "fab fa-sass" },
-          { name: "Bootstrap", icon: "fab fa-bootstrap" }
+          { name: "Vue.js", icon: "fab fa-vuejs" },
+          { name: "React Native", icon: "fab fa-react" },
+          { name: "Uni-APP", icon: "fa-solid fa-code" },
+          { name: "Android(Kotlin)", icon: "fab fa-android" },
+          { name: "Harmony(ArkTS)", icon: "fa-solid fa-code" },
         ]
       },
       {
         category: "backend_skills",
         items: [
+          { name: "Spring AI", icon: "fa-brands fa-java" },
+          { name: "Spring Boot", icon: "fa-brands fa-java" },
+          { name: "Spring MVC", icon: "fa-brands fa-java" },
           { name: "Node.js", icon: "fab fa-node-js" },
-          { name: "Python", icon: "fab fa-python" },
-          { name: "MySQL", icon: "fas fa-database" },
-          { name: "MongoDB", icon: "fas fa-server" },
-          { name: "Express", icon: "fas fa-code" },
-          { name: "Django", icon: "fas fa-code" },
-          { name: "Redis", icon: "fas fa-code" },
-          { name: "PostgreSQL", icon: "fas fa-code" }
         ]
       },
       {
         category: "tools_skills",
         items: [
+          { name: "HTML5", icon: "fab fa-html5" },
+          { name: "CSS3", icon: "fab fa-css3-alt" },
+          { name: "Java", icon: "fa-brands fa-java" },
+          { name: "JavaScript", icon: "fab fa-js-square" },
+          { name: "TypeScript", icon: "fa-regular fa-file-code" },
           { name: "Git", icon: "fab fa-git-alt" },
-          { name: "Docker", icon: "fab fa-docker" },
-          { name: "AWS", icon: "fab fa-aws" },
-          { name: "VS Code", icon: "fas fa-code" },
-          { name: "Webpack", icon: "fas fa-code" },
-          { name: "Babel", icon: "fas fa-code" },
-          { name: "Jest", icon: "fas fa-code" },
-          { name: "ESLint", icon: "fas fa-code" }
+          { name: "MySQL", icon: "fas fa-database" },
+          { name: "MongoDB", icon: "fas fa-server" },
         ]
       }
     ],
@@ -354,48 +342,42 @@ const langConfig = {
     view_code: "View Code",
     
     // 技术栈标题
-    frontend_skills: "Frontend Technologies",
-    backend_skills: "Backend Technologies",
-    tools_skills: "Development Tools",
+    frontend_skills: "Front-end framework",
+    backend_skills: "Back-end framework",
+    tools_skills: "Programming language and technologies",
     // 技术栈数组
     skills_list: [
       {
         category: "frontend_skills",
         items: [
-          { name: "HTML5", icon: "fab fa-html5" },
-          { name: "CSS3", icon: "fab fa-css3-alt" },
-          { name: "JavaScript", icon: "fab fa-js-square" },
           { name: "React", icon: "fab fa-react" },
-          { name: "Vue.js", icon: "fab fa-vue" },
-          { name: "Angular", icon: "fab fa-angular" },
-          { name: "Sass", icon: "fab fa-sass" },
-          { name: "Bootstrap", icon: "fab fa-bootstrap" }
+          { name: "Vue.js", icon: "fab fa-vuejs" },
+          { name: "React Native", icon: "fab fa-react" },
+          { name: "Uni-APP", icon: "fa-solid fa-code" },
+          { name: "Android(Kotlin)", icon: "fab fa-android" },
+          { name: "Harmony(ArkTS)", icon: "fa-solid fa-code" },
         ]
       },
       {
         category: "backend_skills",
         items: [
+          { name: "Spring AI", icon: "fa-brands fa-java" },
+          { name: "Spring Boot", icon: "fa-brands fa-java" },
+          { name: "Spring MVC", icon: "fa-brands fa-java" },
           { name: "Node.js", icon: "fab fa-node-js" },
-          { name: "Python", icon: "fab fa-python" },
-          { name: "MySQL", icon: "fas fa-database" },
-          { name: "MongoDB", icon: "fas fa-server" },
-          { name: "Express", icon: "fas fa-code" },
-          { name: "Django", icon: "fas fa-code" },
-          { name: "Redis", icon: "fas fa-code" },
-          { name: "PostgreSQL", icon: "fas fa-code" }
         ]
       },
       {
         category: "tools_skills",
         items: [
+          { name: "HTML5", icon: "fab fa-html5" },
+          { name: "CSS3", icon: "fab fa-css3-alt" },
+          { name: "Java", icon: "fa-brands fa-java" },
+          { name: "JavaScript", icon: "fab fa-js-square" },
+          { name: "TypeScript", icon: "fa-regular fa-file-code" },
           { name: "Git", icon: "fab fa-git-alt" },
-          { name: "Docker", icon: "fab fa-docker" },
-          { name: "AWS", icon: "fab fa-aws" },
-          { name: "VS Code", icon: "fas fa-code" },
-          { name: "Webpack", icon: "fas fa-code" },
-          { name: "Babel", icon: "fas fa-code" },
-          { name: "Jest", icon: "fas fa-code" },
-          { name: "ESLint", icon: "fas fa-code" }
+          { name: "MySQL", icon: "fas fa-database" },
+          { name: "MongoDB", icon: "fas fa-server" },
         ]
       }
     ],

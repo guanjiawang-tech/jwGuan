@@ -933,8 +933,8 @@ function downloadFile(filename) {
   
   // 特殊处理简历文件下载
   if (filename === 'resume.pdf') {
-    link.href = './resources/22计科02班关佳旺2231030102.pdf';
-    link.download = '22计科02班关佳旺2231030102.pdf';
+    link.href = './resources/J·Wang Guan.pdf';
+    link.download = 'J·Wang Guan.pdf';
   } else {
     // 其他文件保持原路径
     link.href = `./resources/${filename}`;
