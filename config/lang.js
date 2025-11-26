@@ -226,8 +226,8 @@ const langConfig = {
         2024年遼寧省普通高等学校大学生モバイルアプリケーション開発コンテスト 省レベル三等賞 など複数の賞を受賞。\n`,
         images: ["./img/project2_1.png", "./img/project2_2.png", "./img/project2_3.png", "./img/project2_4.png"],
         techs: ["Vue.js", "uni-app", "Spring MVC", "Node.js", "fast API", "MySQL"],
-        demo_text: "平台デモ動画リンク：https://pan.baidu.com/s/1biZdugpjBvYtdoK3JhoX2Q?pwd=5239",
-        code_text: "フロントエンドはVue.js + uni-appで構築され、バックエンドはSpring MVC + Node.jsアーキテクチャを採用し、データベースにはMySQLを使用しています。"
+        demo_text: "プラットフォームデモ動画リンク：https://pan.baidu.com/s/1biZdugpjBvYtdoK3JhoX2Q?pwd=5239",
+        code_text: "コードは現在プライベートリポジトリにあり、2025年12月1日に公開予定です。"
       },
       {
         id: "project1",
@@ -235,8 +235,8 @@ const langConfig = {
         description: "H5ネイティブで開発されたパーソナルブログシステム、静的リソースページ。",
         images: ["./img/background3.jpg", "./img/background4.jpg", "./img/background2.jpg"],
         techs: ["HTML5", "CSS3", "JavaScript"],
-        demo_text: "記事の公開、カテゴリ管理、コメントインタラクションなどの基本的なブログ機能をサポートしています。",
-        code_text: "フロントエンドのみで実装され、HTML5セマンティックタグを使用し、CSS3でレスポンシブレイアウトを実現し、JavaScriptでインタラクティブ機能を実装しています。"
+        demo_text: "このプロジェクトは静的ページで、長期的に維持管理され、私の個人情報を展示しています。必要に応じてGitHubから取得できます。",
+        code_text: "このプロジェクトは静的ページで、長期的に維持管理され、私の個人情報を展示しています。必要に応じてGitHubから取得できます:https://github.com/guanjiawang-tech/jwGuan.git"
       }
     ],
     view_demo: "デモを見る",
@@ -371,16 +371,16 @@ const langConfig = {
         images: ["./img/project2_1.png", "./img/project2_2.png", "./img/project2_3.png", "./img/project2_4.png"],
         techs: ["Vue.js", "uni-app", "Spring MVC", "Node.js", "fast API", "MySQL"],
         demo_text: "Platform demo video link：https://pan.baidu.com/s/1biZdugpjBvYtdoK3JhoX2Q?pwd=5239",
-        code_text: "The frontend is built with Vue.js + uni-app, the backend adopts Spring MVC + Node.js architecture, and MySQL is used for the database."
+        code_text: "The code is currently in a private repository and is expected to be released on 2025-12-01."
       },
       {
         id: "project1",
         title: "Personal Blog System",
         description: "Personal blog system developed with native H5, static resource page.",
-        image: "./img/background3.jpg",
+        images: ["./img/background3.jpg", "./img/background4.jpg", "./img/background2.jpg"],
         techs: ["HTML5", "CSS3", "JavaScript"],
-        demo_text: "Supports basic blog functions such as article publishing, category management, and comment interaction.",
-        code_text: "Implemented with pure frontend, using HTML5 semantic tags, CSS3 for responsive layout, and JavaScript for interactive functions."
+        demo_text: "This project is a static page, maintained for a long time and displaying my personal information, which can be retrieved from GitHub if needed.",
+        code_text: "This project is a static page, maintained for a long time and displaying my personal information, which can be retrieved from GitHub if needed:https://github.com/guanjiawang-tech/jwGuan.git"
       }
     ],
     view_demo: "View Demo",
