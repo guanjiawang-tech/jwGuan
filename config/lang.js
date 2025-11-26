@@ -17,7 +17,7 @@ const langConfig = {
     resources: "资源",
     
     // 首页内容
-    hero_desc: "热爱编程，专注于前端开发和全栈技术。拥有扎实的计算机基础知识和丰富的项目经验，致力于创造优秀的用户体验。",
+    hero_desc: "热爱编程，专注于前端开发和全栈技术。对于新兴技术学习能力强，喜欢各个国家民族的文学作品。",
     view_projects: "查看项目",
     view_skills: "技术栈",
     
@@ -78,10 +78,10 @@ const langConfig = {
         辽宁省教育厅办公室2024年国家及省级大学生创新训练计划立项 省级立项 \n
         2024 年辽宁省普通高等学校大学生微信小程序应用开发大赛 省级二等奖 \n
         2024 年辽宁省普通高等学校大学生移动应用开发大赛 省级三等奖 等多项奖项。\n`,
-        images: ["./img/background2.jpg", "./img/background7.jpg", "./img/background3.jpg"],
+        images: ["./img/project2_1.png", "./img/project2_2.png", "./img/project2_3.png", "./img/project2_4.png"],
         techs: ["Vue.js", "uni-app", "Spring MVC", "Node.js", "fast API", "MySQL"],
-        demo_text: "平台包含志愿者注册、老人需求发布、服务匹配、活动管理等核心功能模块。",
-        code_text: "前端使用Vue.js + uni-app构建，后端采用Spring MVC + Node.js架构，数据库使用MySQL。"
+        demo_text: "平台演示视频链接：https://pan.baidu.com/s/1biZdugpjBvYtdoK3JhoX2Q?pwd=5239",
+        code_text: "代码目前在私有仓库中，预计2025-12-01开放"
       },
       {
         id: "project1",
@@ -89,8 +89,8 @@ const langConfig = {
         description: "使用H5原生开发的个人博客系统，静态资源页面。",
         images: ["./img/background3.jpg", "./img/background4.jpg", "./img/background2.jpg"],
         techs: ["HTML5", "CSS3", "JavaScript"],
-        demo_text: "支持文章发布、分类管理、评论互动等基础博客功能。",
-        code_text: "纯前端实现，使用HTML5语义化标签，CSS3实现响应式布局，JavaScript实现交互功能。"
+        demo_text: "本项目为静态页面，长期维护并展示我的个人信息，需要可GitHub自提",
+        code_text: "本项目为静态页面，长期维护并展示我的个人信息，需要可GitHub自提:https://github.com/guanjiawang-tech/jwGuan.git"
       }
     ],
     view_demo: "查看演示",
@@ -224,9 +224,9 @@ const langConfig = {
         description: `遼寧省教育庁弁公室2024年国家及び省レベル大学生革新訓練計画立案 省レベル立案 \n
         2024年遼寧省普通高等学校大学生WeChatミニプログラムアプリケーション開発コンテスト 省レベル二等賞 \n
         2024年遼寧省普通高等学校大学生モバイルアプリケーション開発コンテスト 省レベル三等賞 など複数の賞を受賞。\n`,
-        images: ["./img/background2.jpg", "./img/background7.jpg", "./img/background3.jpg"],
+        images: ["./img/project2_1.png", "./img/project2_2.png", "./img/project2_3.png", "./img/project2_4.png"],
         techs: ["Vue.js", "uni-app", "Spring MVC", "Node.js", "fast API", "MySQL"],
-        demo_text: "プラットフォームにはボランティア登録、高齢者ニーズ発信、サービスマッチング、活動管理などのコア機能モジュールが含まれています。",
+        demo_text: "平台デモ動画リンク：https://pan.baidu.com/s/1biZdugpjBvYtdoK3JhoX2Q?pwd=5239",
         code_text: "フロントエンドはVue.js + uni-appで構築され、バックエンドはSpring MVC + Node.jsアーキテクチャを採用し、データベースにはMySQLを使用しています。"
       },
       {
@@ -368,9 +368,9 @@ const langConfig = {
         id: "project2",
         title: "Elderly Volunteer Service Platform | Full Stack | School Project | Provincial Awards",
         description: "Awarded provincial-level project approval in the 2024 National and Provincial College Student Innovation Training Program by Liaoning Provincial Department of Education Office, provincial second prize in the 2024 Liaoning Province College Student WeChat Mini Program Application Development Competition, and provincial third prize in the 2024 Liaoning Province College Student Mobile Application Development Competition, among other awards.",
-        image: "./img/background2.jpg",
+        images: ["./img/project2_1.png", "./img/project2_2.png", "./img/project2_3.png", "./img/project2_4.png"],
         techs: ["Vue.js", "uni-app", "Spring MVC", "Node.js", "fast API", "MySQL"],
-        demo_text: "The platform includes core functional modules such as volunteer registration, elderly needs publishing, service matching, and activity management.",
+        demo_text: "Platform demo video link：https://pan.baidu.com/s/1biZdugpjBvYtdoK3JhoX2Q?pwd=5239",
         code_text: "The frontend is built with Vue.js + uni-app, the backend adopts Spring MVC + Node.js architecture, and MySQL is used for the database."
       },
       {
