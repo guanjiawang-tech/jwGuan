@@ -1771,12 +1771,107 @@ a {
   text-align: center;
 }
 
-.modal-demo img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
+.modal-demo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  /* 文字介绍样式 */
+  .demo-text-intro {
+    color: #333;
+    line-height: 1.8;
+    margin: 0 0 20px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+  }
+  
+  /* 图片容器样式 */
+  .project-images-container {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  /* 主图样式 */
+  .project-main-image {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .project-main-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* 缩略图容器样式 */
+  .project-thumbnails {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+  
+  /* 缩略图样式 */
+  .project-thumbnail-wrapper {
+    flex-shrink: 0;
+    width: 80px;
+    height: 60px;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-thumbnail-wrapper:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .project-thumbnail-wrapper.active {
+    border-color: #4a90e2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-thumbnail-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* 响应式设计 */
+  @media (max-width: 768px) {
+    .modal-content {
+      width: 95%;
+      max-height: 95vh;
+    }
+    
+    .modal-body {
+      padding: 15px;
+    }
+    
+    .demo-text-intro {
+      padding: 12px;
+      font-size: 0.95rem;
+    }
+    
+    .project-thumbnail-wrapper {
+      width: 60px;
+      height: 45px;
+    }
+  }
 
 .modal-code {
   background: #f8f9fa;

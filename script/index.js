@@ -105,7 +105,7 @@ function setLanguage(lang) {
         
         projectCard.innerHTML = `
           <div class="project-image">
-            <img src="${project.image}" alt="${project.title}" />
+            <img src="${project.images ? project.images[0] : project.image || './img/background2.jpg'}" alt="${project.title}" />
             <div class="project-overlay">
               <div class="project-links">
                 <button class="project-link" onclick="openProjectModal('${project.id}', 'demo')" data-lang="view_demo">${config.view_demo}</button>
@@ -892,9 +892,64 @@ function openProjectModal(projectId, tabName = 'demo') {
     document.getElementById('codePreview').textContent = config.view_code + ' - ' + project.title;
   }
   
-  // 如果项目有图片，更新演示图片
-  if (project.image) {
-    document.getElementById('demoImage').src = project.image;
+  // 处理多图片展示
+  const imagesContainer = document.getElementById('projectImagesContainer');
+  imagesContainer.innerHTML = '';
+  
+  // 检查是否有images数组
+  if (project.images && project.images.length > 0) {
+    // 创建主图显示
+    const mainImageWrapper = document.createElement('div');
+    mainImageWrapper.className = 'project-main-image';
+    const mainImage = document.createElement('img');
+    mainImage.id = 'demoImage';
+    mainImage.src = project.images[0];
+    mainImage.alt = '项目演示';
+    mainImageWrapper.appendChild(mainImage);
+    imagesContainer.appendChild(mainImageWrapper);
+    
+    // 创建缩略图容器
+    const thumbnailsContainer = document.createElement('div');
+    thumbnailsContainer.className = 'project-thumbnails';
+    
+    // 为每张图片创建缩略图
+    project.images.forEach((imgSrc, index) => {
+      const thumbnailWrapper = document.createElement('div');
+      thumbnailWrapper.className = 'project-thumbnail-wrapper';
+      if (index === 0) {
+        thumbnailWrapper.classList.add('active');
+      }
+      
+      const thumbnail = document.createElement('img');
+      thumbnail.src = imgSrc;
+      thumbnail.alt = `缩略图 ${index + 1}`;
+      thumbnail.addEventListener('click', () => {
+        // 更新主图
+        mainImage.src = imgSrc;
+        // 更新缩略图激活状态
+        document.querySelectorAll('.project-thumbnail-wrapper').forEach(wrapper => {
+          wrapper.classList.remove('active');
+        });
+        thumbnailWrapper.classList.add('active');
+      });
+      
+      thumbnailWrapper.appendChild(thumbnail);
+      thumbnailsContainer.appendChild(thumbnailWrapper);
+    });
+    
+    imagesContainer.appendChild(thumbnailsContainer);
+    imagesContainer.style.display = 'block';
+  } else if (project.image) {
+    // 兼容单个图片的情况
+    imagesContainer.innerHTML = `
+      <div class="project-main-image">
+        <img id="demoImage" src="${project.image}" alt="项目演示" />
+      </div>
+    `;
+    imagesContainer.style.display = 'block';
+  } else {
+    // 没有图片时隐藏图片容器
+    imagesContainer.style.display = 'none';
   }
   
   // 隐藏访问项目按钮，因为我们现在使用文本形式展示

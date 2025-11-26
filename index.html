@@ -127,8 +127,12 @@
 						</div>
 						<div class="modal-tab-content active" id="demoContent">
 							<div class="modal-demo">
-								<img id="demoImage" src="./img/background2.jpg" alt="项目演示" />
-								<p id="demoDescription">项目演示截图和说明</p>
+								<!-- 先显示文字介绍 -->
+								<p id="demoDescription" class="demo-text-intro">项目演示截图和说明</p>
+								<!-- 再显示图片 -->
+								<div id="projectImagesContainer" class="project-images-container">
+									<img id="demoImage" src="./img/background2.jpg" alt="项目演示" />
+								</div>
 							</div>
 						</div>
 						<div class="modal-tab-content" id="codeContent">
