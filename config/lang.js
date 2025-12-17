@@ -54,6 +54,19 @@ const langConfig = {
     // 项目列表
     projects_list: [
       {
+        id: "project5",
+        title: "TODO List Application | 笔试项目 | 面试项目",
+        description: `一个功能完善的待办事项应用，支持任务的增删改查操作。核心工作流程包括：\n1. 用户在界面上进行任务操作（添加/编辑/删除）\n2. 无网络连接时，系统自动将数据持久化存储在本地\n3. 当网络恢复连接后，数据自动同步到MongoDB数据库，确保数据一致性\n4. 支持任务优先级设置、分类管理和提醒功能\n`,
+        images: ["./img/background3.jpg"],
+        techs: ["Kotlin", "MongoDB", "Node.js", "Local Storage"],
+        demo_text: "展示部分公开页面以及上线图片",
+        code_text: `TODOAndroidApplication:
+        https://github.com/guanjiawang-tech/TODOAndroidApplication.git
+TODOAndroidApplicationBackend:
+        https://github.com/guanjiawang-tech/TODOAndroidApplicationBackend.git
+        `
+      },
+      {
         id: "project4",
         title: "《沈工智校》 | 上线项目 | 实习项目 | 团队项目",
         description: `根据现有的《沈工智校》移动端(CloudAPI)开发鸿蒙版的项目，已经成功上线到华为应用商城\n`,
@@ -210,6 +223,19 @@ TimeBank_System_fastAPI：
     // プロジェクトリスト
     projects_list: [
       {
+        id: "project5",
+        title: "TODO List Application | 筆記試験プロジェクト | 面接プロジェクト",
+        description: `機能の完備したToDoリストアプリケーションで、タスクの追加・削除・編集・検索が可能です。コアワークフローは以下の通りです：\n1. ユーザーがインターフェースでタスク操作（追加/編集/削除）を行う\n2. ネットワーク接続がない場合、システムは自動的にデータをローカルに永続化ストレージする\n3. ネットワーク接続が回復すると、データは自動的にMongoDBデータベースに同期され、データの一貫性が確保される\n4. タスクの優先度設定、カテゴリ管理、リマインダー機能をサポート\n`,
+        images: ["./img/background3.jpg"],
+        techs: ["Kotlin", "MongoDB", "Node.js", "ローカルストレージ"],
+        demo_text: "一部の公開ページとリリース画像を展示します",
+        code_text: `TODOAndroidApplication:
+        https://github.com/guanjiawang-tech/TODOAndroidApplication.git
+TODOAndroidApplicationBackend:
+        https://github.com/guanjiawang-tech/TODOAndroidApplicationBackend.git
+        `
+      },
+      {
         id: "project4",
         title: "「沈工智校」 | リリースプロジェクト | インターンシッププロジェクト | チームプロジェクト",
         description: `既存の「沈工智校」モバイル版(CloudAPI)に基づいてHarmonyOS版を開発し、华为アプリストアに正常にリリースされました\n`,
@@ -364,6 +390,19 @@ TimeBank_System_fastAPI：
     projects: "Projects",
     // 项目列表
     projects_list: [
+      {
+        id: "project5",
+        title: "TODO List Application | Written Test Project | Interview Project",
+        description: `A fully functional to-do list application that supports CRUD operations for tasks. The core workflow includes:\n1. Users perform task operations (add/edit/delete) on the interface\n2. When offline, the system automatically persists data locally\n3. When network connection is restored, data is automatically synchronized to MongoDB database to ensure data consistency\n4. Supports task priority setting, category management, and reminder functions\n`,
+        images: ["./img/background3.jpg"],
+        techs: ["Kotlin", "MongoDB", "Node.js", "Local Storage"],
+        demo_text: "Display some public pages and release images",
+        code_text: `TODOAndroidApplication:
+        https://github.com/guanjiawang-tech/TODOAndroidApplication.git
+TODOAndroidApplicationBackend:
+        https://github.com/guanjiawang-tech/TODOAndroidApplicationBackend.git
+        `
+      },
       {
         id: "project4",
         title: "Shen Gong Zhi Xiao | Released Project | Internship Project | Team Project",
