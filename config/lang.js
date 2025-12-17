@@ -78,10 +78,19 @@ const langConfig = {
         辽宁省教育厅办公室2024年国家及省级大学生创新训练计划立项 省级立项 \n
         2024 年辽宁省普通高等学校大学生微信小程序应用开发大赛 省级二等奖 \n
         2024 年辽宁省普通高等学校大学生移动应用开发大赛 省级三等奖 等多项奖项。\n`,
-        images: ["./img/project2_1.png", "./img/project2_2.png", "./img/project2_3.png", "./img/project2_4.png"],
+        images: ["./img/project2_01.jpg", "./img/project2_02.png", "./img/project2_1.png", "./img/project2_2.png", "./img/project2_3.png", "./img/project2_4.png"],
         techs: ["Vue.js", "uni-app", "Spring MVC", "Node.js", "fast API", "MySQL"],
         demo_text: "平台演示视频链接：https://pan.baidu.com/s/1biZdugpjBvYtdoK3JhoX2Q?pwd=5239",
-        code_text: "代码目前在私有仓库中，预计2025-12-01开放"
+        code_text: `TimeBank_System_Vue：
+        https://github.com/guanjiawang-tech/TimeBank_System_Vue.git
+TimeBank_System_SpringBoot：
+        https://github.com/guanjiawang-tech/TimeBank_System_SpringBoot.git
+TimeBank_System_miniprograme：
+        https://github.com/guanjiawang-tech/TimeBank_System_miniprograme.git
+TimeBank_System_nodeJS：
+        https://github.com/guanjiawang-tech/TimeBank_System_nodeJS.git
+TimeBank_System_fastAPI：
+        https://github.com/guanjiawang-tech/TimeBank_System_fastAPI.git`
       },
       {
         id: "project1",
@@ -224,10 +233,19 @@ const langConfig = {
         description: `遼寧省教育庁弁公室2024年国家及び省レベル大学生革新訓練計画立案 省レベル立案 \n
         2024年遼寧省普通高等学校大学生WeChatミニプログラムアプリケーション開発コンテスト 省レベル二等賞 \n
         2024年遼寧省普通高等学校大学生モバイルアプリケーション開発コンテスト 省レベル三等賞 など複数の賞を受賞。\n`,
-        images: ["./img/project2_1.png", "./img/project2_2.png", "./img/project2_3.png", "./img/project2_4.png"],
+        images: ["./img/project2_01.jpg", "./img/project2_02.png", "./img/project2_1.png", "./img/project2_2.png", "./img/project2_3.png", "./img/project2_4.png"],
         techs: ["Vue.js", "uni-app", "Spring MVC", "Node.js", "fast API", "MySQL"],
         demo_text: "プラットフォームデモ動画リンク：https://pan.baidu.com/s/1biZdugpjBvYtdoK3JhoX2Q?pwd=5239",
-        code_text: "コードは現在プライベートリポジトリにあり、2025年12月1日に公開予定です。"
+        code_text: `TimeBank_System_Vue：
+        https://github.com/guanjiawang-tech/TimeBank_System_Vue.git
+TimeBank_System_SpringBoot：
+        https://github.com/guanjiawang-tech/TimeBank_System_SpringBoot.git
+TimeBank_System_miniprograme：
+        https://github.com/guanjiawang-tech/TimeBank_System_miniprograme.git
+TimeBank_System_nodeJS：
+        https://github.com/guanjiawang-tech/TimeBank_System_nodeJS.git
+TimeBank_System_fastAPI：
+        https://github.com/guanjiawang-tech/TimeBank_System_fastAPI.git`
       },
       {
         id: "project1",
@@ -368,10 +386,19 @@ const langConfig = {
         id: "project2",
         title: "Elderly Volunteer Service Platform | Full Stack | School Project | Provincial Awards",
         description: "Awarded provincial-level project approval in the 2024 National and Provincial College Student Innovation Training Program by Liaoning Provincial Department of Education Office, provincial second prize in the 2024 Liaoning Province College Student WeChat Mini Program Application Development Competition, and provincial third prize in the 2024 Liaoning Province College Student Mobile Application Development Competition, among other awards.",
-        images: ["./img/project2_1.png", "./img/project2_2.png", "./img/project2_3.png", "./img/project2_4.png"],
+        images: ["./img/project2_01.jpg", "./img/project2_02.png", "./img/project2_1.png", "./img/project2_2.png", "./img/project2_3.png", "./img/project2_4.png"],
         techs: ["Vue.js", "uni-app", "Spring MVC", "Node.js", "fast API", "MySQL"],
         demo_text: "Platform demo video link：https://pan.baidu.com/s/1biZdugpjBvYtdoK3JhoX2Q?pwd=5239",
-        code_text: "The code is currently in a private repository and is expected to be released on 2025-12-01."
+        code_text: `TimeBank_System_Vue：
+        https://github.com/guanjiawang-tech/TimeBank_System_Vue.git
+TimeBank_System_SpringBoot：
+        https://github.com/guanjiawang-tech/TimeBank_System_SpringBoot.git
+TimeBank_System_miniprograme：
+        https://github.com/guanjiawang-tech/TimeBank_System_miniprograme.git
+TimeBank_System_nodeJS：
+        https://github.com/guanjiawang-tech/TimeBank_System_nodeJS.git
+TimeBank_System_fastAPI：
+        https://github.com/guanjiawang-tech/TimeBank_System_fastAPI.git`
       },
       {
         id: "project1",
